@@ -34,7 +34,7 @@ function calculateDemo(){
     if(coreStatus) coreStatus.textContent = 'INPUT REJECTED';
     return;
   }
-  const estimate = 0.9694, lower = 0.3543, upper = 1.5845;
+  const estimate = 0.969434390971224, lower = 0.35433643731993003, upper = 1.584532344622518;
   const gross = customers * estimate;
   const delivery = customers * cost;
   const afterAssumedCost = gross - delivery;
@@ -53,6 +53,30 @@ function calculateDemo(){
   result.querySelector('[data-result="cost"]').textContent = money(delivery);
   result.querySelector('[data-result="net"]').textContent = money(afterAssumedCost);
   result.querySelector('[data-result="check"]').textContent = 'PASS — arithmetic and input bounds only';
+  const adjustedLow = customers * (lower - cost);
+  const adjustedHigh = customers * (upper - cost);
+  const decisionPanel = document.getElementById('demoDecisionPanel');
+
+  let decisionStatus;
+  let decisionExplanation;
+
+  if (adjustedLow > 0) {
+    decisionStatus = 'POSITIVE ACROSS THE HISTORICAL INTERVAL';
+    decisionExplanation = 'The assumed delivery cost is below the historical interval lower bound.';
+  } else if (adjustedHigh < 0) {
+    decisionStatus = 'NEGATIVE ACROSS THE HISTORICAL INTERVAL';
+    decisionExplanation = 'The assumed delivery cost exceeds the historical interval upper bound.';
+  } else {
+    decisionStatus = 'UNCERTAIN AFTER ASSUMED COST';
+    decisionExplanation = 'The historical interval includes zero after the assumed delivery cost.';
+  }
+
+  document.getElementById('demoDecisionStatus').textContent = decisionStatus;
+  document.getElementById('demoDecisionExplanation').textContent = decisionExplanation;
+  document.getElementById('demoDecisionRange').textContent =
+    money(adjustedLow) + ' to ' + money(adjustedHigh);
+
+  decisionPanel.hidden = false;
   document.getElementById('demoInputs').hidden = true;
   result.hidden = false;
   state.textContent = 'ILLUSTRATIVE RESULT / CHECK COMPLETE';

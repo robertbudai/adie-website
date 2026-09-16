@@ -697,6 +697,12 @@
       <button type="button" id="demoCalculate" class="demo-primary">CALCULATE ILLUSTRATIVE IMPACT →</button>
     </div>
     <div id="demoResults" hidden aria-live="polite">
+      <div id="demoDecisionPanel" class="demo-disclosure" hidden>
+        <p><strong>Illustrative decision assessment:</strong> <span id="demoDecisionStatus"></span></p>
+        <p id="demoDecisionExplanation"></p>
+        <p><strong>Uncertainty after assumed delivery cost:</strong> <span id="demoDecisionRange"></span></p>
+        <p>This assessment applies an illustrative cost threshold to frozen historical evidence. It does not select a new treatment or predict a future campaign outcome.</p>
+      </div>
       <div class="demo-metrics"><div><small>ESTIMATED GROSS INCREMENTAL REVENUE</small><strong data-result="gross"></strong></div><div><small>95% ESTIMATE INTERVAL (GROSS)</small><strong data-result="range"></strong></div><div><small>ASSUMED DELIVERY COST</small><strong data-result="cost"></strong></div><div><small>ESTIMATE AFTER ASSUMED DELIVERY COST</small><strong data-result="net"></strong></div></div>
       <p><strong>Decision:</strong> Historical frozen fallback: Men's E-Mail vs No E-Mail. This demo does not select a new treatment.</p>
       <p><strong>Verification:</strong> <span data-result="check"></span>. This is not a rerun of Hillstrom validation or a live engine verification.</p>
