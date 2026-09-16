@@ -1,0 +1,725 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="ADIE — Adaptive Decision Intelligence Engine">
+<title>ADIE — Adaptive Decision Intelligence Engine</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="real-top-nav" aria-label="Primary navigation">
+    <a href="#top" data-real-route="home">Home</a>
+    <a href="#technology" data-real-route="technology">Technology</a>
+    <a href="#validation-center" data-real-route="validation">Validation</a>
+    <a href="#security-center" data-real-route="security">Cybersecurity</a>
+    <a href="#usecases-center" data-real-route="usecases">Use Cases</a>
+    <a href="#documentation-center" data-real-route="documentation">Documentation</a>
+    <a href="#about-center" data-real-route="about">About</a>
+    <a href="#contact-center" data-real-route="contact" class="real-contact">Contact</a>
+  </nav>
+
+<header class="mobile-head">
+  <strong>ADIE</strong><button id="menuBtn" aria-label="Open navigation">☰</button>
+</header>
+
+<main>
+  <section class="visual-stage" aria-label="ADIE product overview">
+
+
+  <div class="hero-real-controls" aria-label="ADIE hero controls">
+    <button class="hero-zone zone-data" data-hero-action="technology" aria-label="Data Ingest — open Technology"><span>DATA<br>INGEST</span></button>
+    <button class="hero-zone zone-causal" data-hero-action="technology" aria-label="Causal Analysis — open Technology"><span>CAUSAL<br>ANALYSIS</span></button>
+    <button class="hero-zone zone-decision" data-hero-action="technology" aria-label="Decision Engine — open Technology"><span>DECISION<br>ENGINE</span></button>
+    <button class="hero-zone zone-safety" data-hero-action="security" aria-label="Safety Gate — open Cybersecurity"><span>SAFETY<br>GATE</span></button>
+    <button class="hero-zone zone-action" data-hero-action="usecases" aria-label="Action and Monitor — open Use Cases"><span>ACTION<br>&amp; MONITOR</span></button>
+    <button class="hero-zone zone-learn" data-hero-action="validation" aria-label="Learn and Improve — open Validation"><span>LEARN<br>&amp; IMPROVE</span></button>
+    <button id="coreRun" class="hero-zone zone-run" data-hero-action="run" aria-label="Run ADIE visual demo"><span>RUN</span></button>
+    <button id="runDemo" class="hero-zone zone-run-demo" data-hero-action="run" aria-label="Run demo"><span>RUN DEMO</span></button>
+    <button class="hero-zone zone-explore" data-hero-action="technology" aria-label="Explore ADIE"><span>EXPLORE ADIE</span></button>
+  </div>
+
+    <img class="master-scene" src="assets/adie_master_scene.png" alt="">
+    <div class="scene-vignette"></div>
+    <!-- Subtle animated atmospheric layer aligned to the Earth in the master artwork. -->
+    <div class="earth-motion" aria-hidden="true">
+      <div class="earth-atmosphere"></div>
+      <div class="earth-longitudes"></div>
+      <div class="earth-light-sweep"></div>
+    </div>
+    <div class="core-live-layer" aria-hidden="true">
+      <div class="core-ring ring-a"></div>
+      <div class="core-ring ring-b"></div>
+      <div class="core-ring ring-c"></div>
+      <div class="core-energy"></div>
+      <div class="core-scan"></div>
+      <div class="core-status" id="coreStatus">SYSTEM READY</div>
+    </div>
+    <div class="hud-cursor" aria-hidden="true"><span></span></div>
+
+    <!-- Real interactive HTML layer above the cinematic art -->
+
+    <a class="validation-hot" href="#validation" aria-label="View validation details"></a>
+    <a class="security-hot" href="#security" aria-label="View cybersecurity details"></a>
+  </section>
+
+  <section class="live-grid" id="technology">
+    <article class="panel validation-panel" id="validation">
+      <div class="eyebrow">REAL-WORLD VALIDATION</div>
+      <h2>Hillstrom E-Mail Marketing Experiment</h2>
+      <div class="validation-tagline">8 GATES. 8 PASSES. REAL-WORLD IMPACT.</div>
+      <div class="validation-stats">
+        <div><strong>88 / 88</strong><span>Validation tests</span><b>PASS</b></div>
+        <div><strong>2,719 / 2,719</strong><span>Regression tests</span><b>PASS</b></div>
+        <div><strong>12,788</strong><span>Previously unseen<br>records (holdout)</span><em>Consistent performance</em></div>
+      </div>
+      <div class="spectrum" aria-hidden="true">
+        <i style="--h:18%"></i><i style="--h:27%"></i><i style="--h:20%"></i><i style="--h:39%"></i>
+        <i style="--h:31%"></i><i style="--h:46%"></i><i style="--h:58%"></i><i style="--h:49%"></i>
+        <i style="--h:72%"></i><i style="--h:89%"></i><i style="--h:65%"></i><i style="--h:78%"></i>
+        <i style="--h:55%"></i><i style="--h:48%"></i><i style="--h:36%"></i><i style="--h:29%"></i>
+      </div>
+      <a class="panel-btn" href="#validation">VIEW VALIDATION DETAILS <span>→</span></a>
+    </article>
+
+    <article class="panel advantages-panel">
+      <div class="panel-title-row"><div class="bolt">ϟ</div><div class="eyebrow">KEY ADVANTAGES</div></div>
+      <div class="adv adv-rich">
+        <div><i class="ico green">⌬</i><p><strong>Causal decision<br>intelligence</strong><small>Beyond correlation</small></p></div>
+        <div><i class="ico cyan">◇</i><p><strong>Safe, auditable<br>and explainable</strong><small>Trust through transparency</small></p></div>
+        <div><i class="ico gold">▥</i><p><strong>Uncertainty-aware<br>& robust decisions</strong><small>Built for real-world complexity</small></p></div>
+        <div><i class="ico violet">◎</i><p><strong>Business value focus</strong><small>Measurable impact</small></p></div>
+      </div>
+      <a class="panel-btn" href="#technology">HOW IT WORKS <span>→</span></a>
+    </article>
+
+    <article class="panel security-panel" id="security">
+      <div class="security-copy">
+        <div class="eyebrow">CYBERSECURITY & TRUST</div>
+        <h2>Security-hardened enterprise prototype</h2>
+        <ul>
+          <li>Authentication & Session Management</li>
+          <li>Role-Based Access Control (RBAC)</li>
+          <li>Tenant Isolation (multi-tenant ready)</li>
+          <li>Secure API Endpoints (HTTPS, CORS, HSTS)</li>
+          <li>Audit Logging & Observability</li>
+          <li>Data Integrity & Tamper Detection</li>
+          <li>Rate Limiting & Abuse Protection</li>
+          <li>Fail-Closed Security Controls</li>
+        </ul>
+      </div>
+      <div class="security-mark" aria-hidden="true">
+        <div class="shield"><span>▣</span></div>
+        <strong>SECURITY<br>BY DESIGN.</strong>
+        <small>TRUST<br>IN EVERY<br>DECISION.</small>
+      </div>
+      <a class="panel-btn security-btn" href="#security">LEARN MORE <span>→</span></a>
+    </article>
+  </section>
+
+  <section class="technology-section" id="how-adie-works">
+    <div class="tech-kicker">TECHNOLOGY / HOW ADIE WORKS</div>
+    <div class="tech-heading-row">
+      <div>
+        <h2>FROM EVIDENCE TO A VERIFIED DECISION.</h2>
+        <p>ADIE structures evidence, estimates causal effects, represents uncertainty and applies explicit safety boundaries before a decision is treated as actionable.</p>
+      </div>
+      <div class="tech-status"><i></i> AUDITABLE DECISION PIPELINE</div>
+    </div>
+
+    <div class="pipeline-shell" aria-label="ADIE decision pipeline">
+      <div class="pipeline-node" data-tech="evidence" tabindex="0" role="button" aria-pressed="false">
+        <div class="node-icon cyan">▤</div>
+        <b>01</b><h3>EVIDENCE</h3>
+        <p>Real-world inputs are structured and validated before entering the decision process.</p>
+      </div>
+      <div class="pipe-arrow">›</div>
+      <div class="pipeline-node" data-tech="causal" tabindex="0" role="button" aria-pressed="false">
+        <div class="node-icon green">⌬</div>
+        <b>02</b><h3>CAUSAL EFFECT</h3>
+        <p>Estimate what changes because of an intervention — beyond simple correlation.</p>
+      </div>
+      <div class="pipe-arrow">›</div>
+      <div class="pipeline-node" data-tech="uncertainty" tabindex="0" role="button" aria-pressed="false">
+        <div class="node-icon gold">▥</div>
+        <b>03</b><h3>UNCERTAINTY</h3>
+        <p>Confidence and uncertainty remain explicit inputs to the decision process.</p>
+      </div>
+      <div class="pipe-arrow">›</div>
+      <div class="pipeline-node" data-tech="decision" tabindex="0" role="button" aria-pressed="false">
+        <div class="node-icon violet">◎</div>
+        <b>04</b><h3>DECISION</h3>
+        <p>Candidate actions are evaluated against evidence, constraints and expected impact.</p>
+      </div>
+      <div class="pipe-arrow">›</div>
+      <div class="pipeline-node" data-tech="safety" tabindex="0" role="button" aria-pressed="false">
+        <div class="node-icon blue">◇</div>
+        <b>05</b><h3>SAFETY / FALLBACK</h3>
+        <p>Boundaries and fallback logic prevent unsupported confidence from becoming action.</p>
+      </div>
+      <div class="pipe-arrow">›</div>
+      <div class="pipeline-node" data-tech="holdout" tabindex="0" role="button" aria-pressed="false">
+        <div class="node-icon cyan">✓</div>
+        <b>06</b><h3>HOLDOUT VERIFICATION</h3>
+        <p>Performance can be checked against previously unseen evidence before promotion.</p>
+      </div>
+      <div class="pipe-arrow">›</div>
+      <div class="pipeline-node" data-tech="value" tabindex="0" role="button" aria-pressed="false">
+        <div class="node-icon green">↗</div>
+        <b>07</b><h3>BUSINESS VALUE</h3>
+        <p>Decision effects are translated into measurable operational or economic impact.</p>
+      </div>
+      <div class="pipe-arrow">›</div>
+      <div class="pipeline-node" data-tech="audit" tabindex="0" role="button" aria-pressed="false">
+        <div class="node-icon cyan">≡</div>
+        <b>08</b><h3>AUDIT TRAIL</h3>
+        <p>Inputs, decision context and outcomes remain traceable for later review.</p>
+      </div>
+      <div class="pipe-arrow">›</div>
+      <div class="pipeline-node" data-tech="security" tabindex="0" role="button" aria-pressed="false">
+        <div class="node-icon blue">▣</div>
+        <b>09</b><h3>SECURITY</h3>
+        <p>Authentication, authorization, isolation and integrity controls protect the decision path.</p>
+      </div>
+    </div>
+
+    <div class="tech-console" id="techConsole" aria-live="polite">
+      <div class="console-visual" id="consoleVisual" data-mode="evidence">
+        <div class="visual-grid"></div>
+        <div class="visual-stage-mini" id="visualStageMini"></div>
+      </div>
+
+      <div class="console-copy">
+        <div class="console-topline">
+          <span id="consoleStep">01 / EVIDENCE</span>
+          <b><i></i> INTERACTIVE ARCHITECTURE</b>
+        </div>
+        <h3 id="consoleTitle">Evidence enters before a recommendation does.</h3>
+        <p id="consoleBody">Real-world inputs are structured and validated before they enter the decision path. The purpose is to make the evidence boundary explicit and inspectable.</p>
+
+        <div class="console-facts" id="consoleFacts">
+          <div><small>ROLE</small><strong>Validated input</strong></div>
+          <div><small>BOUNDARY</small><strong>Evidence first</strong></div>
+          <div><small>OUTPUT</small><strong>Structured context</strong></div>
+        </div>
+
+        <div class="console-note" id="consoleNote">
+          Select any stage in the pipeline to inspect its role in the ADIE decision architecture.
+        </div>
+      </div>
+    </div>
+
+    <div class="tech-principles">
+      <article>
+        <span>01 / CAUSAL</span>
+        <h3>Evidence before assumptions.</h3>
+        <p>Every recommendation begins with evidence that can be inspected and validated.</p>
+      </article>
+      <article>
+        <span>02 / BOUNDED</span>
+        <h3>Uncertainty is preserved.</h3>
+        <p>ADIE keeps uncertainty visible instead of hiding it behind artificial confidence.</p>
+      </article>
+      <article>
+        <span>03 / VERIFIABLE</span>
+        <h3>Trust requires verification.</h3>
+        <p>Decisions remain auditable and bounded by explicit safety and verification controls.</p>
+      </article>
+    </div>
+  </section>
+
+
+
+<section class="trust-journey" id="decision-trust-journey" aria-labelledby="journey-title">
+ <div class="tj-heading"><div><span class="tj-kicker">DECISION & SYSTEM TRUST / EVIDENCE-FIRST WALKTHROUGH</span><h2 id="journey-title">TWO QUESTIONS. ONE REVIEWABLE DECISION.</h2><p>Explore the decision logic and the controls that protect it. This is an interactive explanation grounded in documented project evidence — not a live engine run or an independent security certification.</p></div><div class="tj-stamp">PUBLIC EVIDENCE VIEW<br><strong>INTERNAL VALIDATION</strong></div></div>
+ <div class="tj-switch" role="group" aria-label="Choose trust journey"><button type="button" data-journey="decision" aria-pressed="true" class="tj-selected">01 / WHY TRUST THE DECISION?</button><button type="button" data-journey="system" aria-pressed="false">02 / WHY TRUST THE SYSTEM?</button></div>
+ <div class="tj-steps" id="tjSteps" role="group" aria-label="Journey steps"></div>
+ <article class="tj-evidence" aria-live="polite"><div class="tj-evidence-top"><span id="tjStepNumber">01 / 06</span><span id="tjEvidenceType">EVIDENCE STATUS</span></div><h3 id="tjStepTitle">Problem</h3><p id="tjStepQuestion"></p><div class="tj-proof-grid"><div><small>WHAT IS SHOWN</small><p id="tjStepProof"></p></div><div><small>BOUNDARY / WHAT IS NOT ESTABLISHED</small><p id="tjStepLimit"></p></div></div><div class="tj-evidence-bottom"><span id="tjStepSource"></span><a id="tjEvidenceLink" href="#validation-center">OPEN SUPPORTING SECTION ↗</a></div></article>
+ <div class="tj-cross"><div><b>DECISION TRUST</b><span>Problem → Evidence → Decision → Uncertainty → Verification → Business Impact</span></div><div><b>SYSTEM TRUST</b><span>Identity → Authorization → Isolation → Integrity → Audit → Security Verification</span></div></div>
+ <p class="tj-disclosure">Evidence boundary: Hillstrom supports the stated randomized marketing validation only. Security results are internal automated checks. This page does not assert universal performance, a completed independent penetration test, production readiness, or realized customer ROI.</p>
+</section>
+
+  <section class="validation-center" id="validation-center">
+    <div class="vc-kicker">VALIDATION CENTER / HILLSTROM RANDOMIZED RETAIL EXPERIMENT</div>
+
+    <div class="vc-head">
+      <div>
+        <h2>CLAIMS SHOULD LEAVE EVIDENCE.</h2>
+        <p>ADIE validation using a public historical randomized marketing experiment containing 64,000 customer records.</p>
+      </div>
+      <div class="vc-seal"><strong>8 / 8</strong><span>VALIDATION GATES<br>PASSED</span></div>
+    </div>
+
+    <div class="vc-metrics">
+      <article><strong>88 / 88</strong><span>HILLSTROM VALIDATION TESTS</span><b>PASS</b></article>
+      <article><strong>2,719 / 2,719</strong><span>FULL REGRESSION TESTS</span><b>PASS</b></article>
+      <article><strong>12,788</strong><span>RESERVED HOLDOUT RECORDS</span><b>UNSEEN</b></article>
+      <article><strong>$0.969</strong><span>GROSS INCREMENTAL REVENUE / CUSTOMER</span><b>H6 HOLDOUT</b></article>
+    </div>
+
+    <div class="vc-gate-layout">
+      <div class="vc-gates" aria-label="Hillstrom validation gates">
+        <button class="vc-gate is-active" data-gate="h1"><span>H1</span><div><strong>Dataset Integrity & Setup</strong><small>Experimental data and setup</small></div><b>PASS</b></button>
+        <button class="vc-gate" data-gate="h2"><span>H2</span><div><strong>Experimental Validity</strong><small>Randomization, balance and positivity</small></div><b>PASS</b></button>
+        <button class="vc-gate" data-gate="h3"><span>H3</span><div><strong>Causal Effect Recovery</strong><small>Six randomized treatment effects</small></div><b>PASS</b></button>
+        <button class="vc-gate" data-gate="h4"><span>H4</span><div><strong>Treatment Discrimination</strong><small>Men's vs Women's E-Mail</small></div><b>PASS</b></button>
+        <button class="vc-gate" data-gate="h5"><span>H5</span><div><strong>Decision Safety</strong><small>Unsupported personalization rejected</small></div><b>PASS</b></button>
+        <button class="vc-gate" data-gate="h6"><span>H6</span><div><strong>Holdout Generalization</strong><small>Frozen fallback on reserved evidence</small></div><b>PASS</b></button>
+        <button class="vc-gate" data-gate="h7"><span>H7</span><div><strong>Business Translation</strong><small>Bounded revenue and break-even scenarios</small></div><b>PASS</b></button>
+        <button class="vc-gate" data-gate="h8"><span>H8</span><div><strong>Reproducibility & Integrity</strong><small>Hashes, recomputation and claim controls</small></div><b>PASS</b></button>
+      </div>
+
+      <div class="vc-evidence" aria-live="polite">
+        <div class="vc-evidence-top">
+          <span id="vcGateId">H1 / PASS</span>
+          <b><i></i> FROZEN EVIDENCE</b>
+        </div>
+        <h3 id="vcTitle">Dataset integrity and experimental setup established.</h3>
+
+        <div class="vc-chain">
+          <div><small>CLAIM</small><p id="vcClaim">The source supports a randomized marketing experiment suitable for the defined validation.</p></div>
+          <div><small>METHOD</small><p id="vcMethod">Validate source identity, experimental structure and the evidence boundary before downstream analysis.</p></div>
+          <div><small>EVIDENCE</small><p id="vcEvidence">64,000 customer records from the Hillstrom randomized retail e-mail experiment.</p></div>
+          <div><small>RESULT</small><p id="vcResult">Dataset integrity and experimental setup: PASS.</p></div>
+          <div class="limit"><small>LIMITATION</small><p id="vcLimit">This establishes the Hillstrom validation setup; it does not establish performance in another company, domain or time period.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="vc-causal">
+      <div class="vc-section-title"><span>CAUSAL EVIDENCE</span><h3>Randomized treatment effects recovered.</h3></div>
+      <div class="vc-causal-grid">
+        <article><span>MEN'S E-MAIL / VISIT</span><strong>+7.66 pp</strong><small>95% CI 7.00 to 8.32 pp</small></article>
+        <article><span>MEN'S E-MAIL / CONVERSION</span><strong>+0.68 pp</strong><small>95% CI 0.50 to 0.86 pp</small></article>
+        <article><span>MEN'S E-MAIL / SPEND</span><strong>+$0.770</strong><small>95% CI $0.485 to $1.055</small></article>
+        <article class="preferred"><span>DIRECT CONTRAST</span><strong>MEN'S E-MAIL</strong><small>Preferred on visit, conversion and spend after Holm correction</small></article>
+      </div>
+      <p class="vc-method-note">Identification: randomized assignment. Estimator: randomized difference in means with Welch standard errors. Independent reference maximum error for recovered treatment effects: 0.0.</p>
+    </div>
+
+    <div class="vc-proof-grid">
+      <article class="vc-proof holdout">
+        <span>H5 + H6 / DECISION RESTRAINT</span>
+        <h3>Unsupported personalization was not promoted.</h3>
+        <p>The individualized candidate did not demonstrate incremental value. ADIE retained the frozen global Men's E-Mail fallback, which remained positive on the untouched 12,788-record holdout.</p>
+        <div class="vc-big">12,788 <small>PREVIOUSLY UNSEEN RECORDS</small></div>
+      </article>
+
+      <article class="vc-proof value">
+        <span>H7 / BOUNDED BUSINESS TRANSLATION</span>
+        <h3>Positive gross-revenue effect on holdout.</h3>
+        <div class="vc-value-row"><strong>$0.9694</strong><small>gross incremental revenue / customer</small></div>
+        <div class="vc-range"><i></i><b></b><i></i></div>
+        <p>95% interval: <strong>$0.3543 to $1.5845</strong>. This is not a net-profit estimate.</p>
+      </article>
+
+      <article class="vc-proof integrity">
+        <span>H8 / REPRODUCIBILITY</span>
+        <h3>Frozen and hash-verifiable evidence.</h3>
+        <div class="vc-integrity-row"><small>VALIDATION</small><strong>8 / 8 PASS</strong></div>
+        <div class="vc-integrity-row"><small>REGRESSION</small><strong>2719 / 2719 PASS</strong></div>
+        <div class="vc-integrity-row"><small>FAILURES</small><strong>0</strong></div>
+        <div class="vc-integrity-row"><small>RUNTIME</small><strong>488.89 s</strong></div>
+        <div class="vc-hash"><small>DATASET SHA-256</small><code>0E5893329D8B93CE...C7284F291AECE</code></div>
+        <div class="vc-hash"><small>COMPUTATION SHA-256</small><code>05799A4376E4C62D...F41FEB7F7ED39B0</code></div>
+      </article>
+    </div>
+
+    <div class="vc-limits">
+      <div>
+        <span>RESPONSIBLE CLAIM BOUNDARY</span>
+        <h3>What this validation supports — and what it does not.</h3>
+      </div>
+      <div class="vc-limit-columns">
+        <article>
+          <b>SUPPORTED BY THIS EVIDENCE</b>
+          <p>Recovery of randomized aggregate treatment effects</p>
+          <p>Treatment discrimination with multiplicity control</p>
+          <p>Safe rejection of one unsupported personalization candidate</p>
+          <p>Frozen fallback generalization to the reserved Hillstrom partition</p>
+          <p>Bounded gross-revenue sensitivity scenarios</p>
+          <p>Deterministic, hash-verifiable evidence artifacts</p>
+        </article>
+        <article class="not-established">
+          <b>NOT ESTABLISHED BY THIS EVIDENCE</b>
+          <p>Universal causal accuracy</p>
+          <p>Performance on arbitrary interventions or domains</p>
+          <p>General individualized decisioning performance</p>
+          <p>Future-company or future-period generalization</p>
+          <p>Audited net profit or realized customer ROI</p>
+          <p>Independent certification or production readiness</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="vc-source">
+      <strong>SOURCE & ATTRIBUTION</strong>
+      <p>Source data: Kevin Hillstrom / MineThatData — E-Mail Analytics and Data Mining Challenge, dated 2008-03-20. This is an independent ADIE validation and was not produced, sponsored or endorsed by Kevin Hillstrom or MineThatData. The raw source dataset is not redistributed here.</p>
+    </div>
+  </section>
+
+
+
+  <section class="security-center" id="security-center">
+    <div class="sc-kicker">CYBERSECURITY & TRUST CENTER / INTERNAL SECURITY VALIDATION</div>
+    <div class="sc-head">
+      <div>
+        <h2>TRUST MUST SURVIVE THE DECISION PATH.</h2>
+        <p>ADIE's security layer is designed around authenticated access, policy boundaries, tenant separation, auditability, integrity controls and fail-closed behavior.</p>
+      </div>
+      <div class="sc-seal"><strong>1,475 / 1,475</strong><span>SECURITY SUITE<br>PASSED</span></div>
+    </div>
+
+    <div class="sc-status">
+      <article><strong>2,631 / 2,631</strong><span>APPLICATION + SECURITY BASELINE</span><b>PASS</b></article>
+      <article><strong>1,475 / 1,475</strong><span>FULL SECURITY SUITE</span><b>PASS</b></article>
+      <article><strong>81 / 81</strong><span>T8B–T8J FINAL SECURITY GATE</span><b>PASS</b></article>
+      <article><strong>0</strong><span>DETECTED SECURITY REGRESSIONS</span><b>INTERNAL VALIDATION</b></article>
+    </div>
+
+    <div class="sc-layout">
+      <div class="sc-controls">
+        <button class="sc-control is-active" data-sec="auth"><span>01</span><div><strong>Authentication & Sessions</strong><small>Authenticated access boundary</small></div><b>ACTIVE</b></button>
+        <button class="sc-control" data-sec="rbac"><span>02</span><div><strong>Role-Based Access Control</strong><small>Admin / developer / viewer boundaries</small></div><b>ACTIVE</b></button>
+        <button class="sc-control" data-sec="tenant"><span>03</span><div><strong>Tenant Isolation</strong><small>Multi-tenant separation controls</small></div><b>ACTIVE</b></button>
+        <button class="sc-control" data-sec="api"><span>04</span><div><strong>API & Request Hardening</strong><small>Request identity, origins and headers</small></div><b>ACTIVE</b></button>
+        <button class="sc-control" data-sec="audit"><span>05</span><div><strong>Audit & Observability</strong><small>Traceable request lifecycle</small></div><b>ACTIVE</b></button>
+        <button class="sc-control" data-sec="integrity"><span>06</span><div><strong>Integrity & Tamper Resistance</strong><small>Defensive integrity verification</small></div><b>ACTIVE</b></button>
+        <button class="sc-control" data-sec="abuse"><span>07</span><div><strong>Rate & Abuse Protection</strong><small>Bounded request pressure</small></div><b>ACTIVE</b></button>
+        <button class="sc-control" data-sec="closed"><span>08</span><div><strong>Fail-Closed Security</strong><small>Unsafe ambiguity does not become access</small></div><b>ACTIVE</b></button>
+      </div>
+
+      <div class="sc-console" aria-live="polite">
+        <div class="sc-console-top"><span id="scId">CONTROL 01 / AUTHENTICATION</span><b><i></i> SECURITY BOUNDARY ACTIVE</b></div>
+        <h3 id="scTitle">Authenticated sessions are required at protected API boundaries.</h3>
+        <div class="sc-flow">
+          <div><small>BOUNDARY</small><p id="scBoundary">Protected API access requires an authenticated session identifier.</p></div>
+          <div><small>CONTROL</small><p id="scControl">Session validation is applied before protected operations proceed.</p></div>
+          <div><small>VERIFICATION</small><p id="scVerify">Invalid-session rejection has been exercised in internal security validation.</p></div>
+          <div><small>FAIL-CLOSED BEHAVIOR</small><p id="scFail">Missing or invalid authentication does not silently become authorized access.</p></div>
+          <div class="scope"><small>ASSURANCE SCOPE</small><p id="scScope">This is internal prototype validation, not an external penetration-test certification.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sc-architecture">
+      <div class="sc-section-title"><span>DEFENSE IN DEPTH</span><h3>Security is distributed across the decision system.</h3></div>
+      <div class="sc-arch-flow">
+        <article><i>01</i><strong>IDENTITY</strong><small>Session authentication</small></article>
+        <em>→</em><article><i>02</i><strong>AUTHORITY</strong><small>RBAC boundary</small></article>
+        <em>→</em><article><i>03</i><strong>ISOLATION</strong><small>Tenant context</small></article>
+        <em>→</em><article><i>04</i><strong>REQUEST</strong><small>API hardening</small></article>
+        <em>→</em><article><i>05</i><strong>DECISION</strong><small>Policy boundary</small></article>
+        <em>→</em><article><i>06</i><strong>EVIDENCE</strong><small>Audit + integrity</small></article>
+      </div>
+    </div>
+
+    <div class="sc-proof-grid">
+      <article class="sc-proof">
+        <span>ACCESS BOUNDARIES</span><h3>Identity is not authority.</h3>
+        <p>Authentication establishes a session. Role controls then constrain what that session may do, while tenant context separates organizational scope.</p>
+        <div class="sc-tags"><b>SESSION</b><b>RBAC</b><b>TENANT</b></div>
+      </article>
+      <article class="sc-proof">
+        <span>REQUEST HARDENING</span><h3>Requests carry security context.</h3>
+        <p>ADIE includes request-ID validation, configured origin controls, security headers and bounded request rates around authenticated API operations.</p>
+        <div class="sc-tags"><b>REQUEST ID</b><b>CORS</b><b>HEADERS</b><b>RATE LIMIT</b></div>
+      </article>
+      <article class="sc-proof">
+        <span>AUDITABILITY</span><h3>Security-relevant activity leaves evidence.</h3>
+        <p>Request lifecycle events and audit records support investigation and verification rather than treating security as an invisible perimeter.</p>
+        <div class="sc-tags"><b>AUDIT</b><b>OBSERVABILITY</b><b>TRACEABILITY</b></div>
+      </article>
+    </div>
+
+    <div class="sc-boundary">
+      <div><span>RESPONSIBLE SECURITY CLAIM</span><h3>What the current evidence means.</h3></div>
+      <div class="sc-boundary-grid">
+        <article>
+          <b>SUPPORTED</b>
+          <p>Security-hardened enterprise prototype</p>
+          <p>Internally validated automated security controls</p>
+          <p>1,475 / 1,475 full security-suite tests passed</p>
+          <p>2,631 / 2,631 application + security baseline passed</p>
+          <p>81 / 81 T8B–T8J final security-gate tests passed</p>
+          <p>Zero detected security regressions at the recorded checkpoint</p>
+        </article>
+        <article class="pending">
+          <b>SEPARATE ASSURANCE STILL REQUIRED</b>
+          <p>Independent external penetration testing</p>
+          <p>Production deployment hardening</p>
+          <p>Dependency and SBOM review</p>
+          <p>Production load and failure testing</p>
+          <p>Production key-management infrastructure</p>
+          <p>Independent audit / certification where required</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="sc-footer-note">
+      <strong>SECURITY POSITION</strong>
+      <p>ADIE is presented as a security-hardened enterprise prototype with internal automated validation. The current evidence is not a claim that the system is unhackable, independently certified, or production-ready.</p>
+    </div>
+  </section>
+
+
+
+  <section class="usecases-center" id="usecases-center">
+    <div class="uc-kicker">USE CASES / DECISION ENVIRONMENTS</div>
+    <div class="uc-head">
+      <div>
+        <h2>WHEN THE DECISION MATTERS MORE THAN THE PREDICTION.</h2>
+        <p>ADIE is designed for decision environments where actions have consequences, uncertainty matters, and the path from evidence to action must remain explainable and auditable.</p>
+      </div>
+      <div class="uc-badge"><strong>6</strong><span>POTENTIAL<br>APPLICATION AREAS</span></div>
+    </div>
+
+    <div class="uc-disclaimer">
+      <b>APPLICATION SCOPE</b>
+      <p>The areas below are potential or designed-for applications. They are not claims of validated performance in these industries. Current real-world causal validation is the Hillstrom randomized retail experiment shown in the Validation Center.</p>
+    </div>
+
+    <div class="uc-layout">
+      <div class="uc-list">
+        <button class="uc-item is-active" data-uc="supply"><span>01</span><div><strong>Supply Chain & Logistics</strong><small>Disruption, routing and operational trade-offs</small></div></button>
+        <button class="uc-item" data-uc="operations"><span>02</span><div><strong>Enterprise Operations</strong><small>Competing actions under constraints</small></div></button>
+        <button class="uc-item" data-uc="risk"><span>03</span><div><strong>Risk & Resilience</strong><small>Intervention, fallback and recovery choices</small></div></button>
+        <button class="uc-item" data-uc="commercial"><span>04</span><div><strong>Commercial Decisions</strong><small>Treatment choice and measurable value</small></div></button>
+        <button class="uc-item" data-uc="resource"><span>05</span><div><strong>Resource Allocation</strong><small>Priorities, constraints and opportunity cost</small></div></button>
+        <button class="uc-item" data-uc="complex"><span>06</span><div><strong>Complex Decision Systems</strong><small>Multi-signal environments with audit requirements</small></div></button>
+      </div>
+
+      <div class="uc-console" aria-live="polite">
+        <div class="uc-console-top"><span id="ucId">USE CASE 01 / SUPPLY CHAIN</span><b><i></i> DESIGNED APPLICATION</b></div>
+        <h3 id="ucTitle">Respond to operational disruption with explicit trade-offs.</h3>
+        <p class="uc-scenario" id="ucScenario">A shipment is delayed while fuel cost, congestion and customer impact are changing at the same time.</p>
+
+        <div class="uc-path">
+          <div><small>SIGNAL</small><p id="ucSignal">Delay, fuel, route and service signals enter the decision context.</p></div>
+          <div><small>DECISION QUESTION</small><p id="ucQuestion">Should the operation hold, reroute, hedge, or combine interventions?</p></div>
+          <div><small>ADIE ROLE</small><p id="ucRole">Compare candidate actions causally, preserve uncertainty, enforce safety boundaries and expose the reasoning path.</p></div>
+          <div><small>VALUE TARGET</small><p id="ucValue">Reduce avoidable loss while keeping the chosen intervention explainable and reviewable.</p></div>
+          <div class="uc-evidence-boundary"><small>EVIDENCE STATUS</small><p id="ucEvidence">Designed application area — not yet validated as a logistics performance claim.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="uc-framework">
+      <div class="uc-section-title"><span>COMMON DECISION PATTERN</span><h3>Different industries. The same underlying decision problem.</h3></div>
+      <div class="uc-framework-flow">
+        <article><i>01</i><strong>WHAT CHANGED?</strong><small>Evidence and context</small></article><em>→</em>
+        <article><i>02</i><strong>WHAT CAUSED IT?</strong><small>Causal structure</small></article><em>→</em>
+        <article><i>03</i><strong>WHAT CAN WE DO?</strong><small>Candidate actions</small></article><em>→</em>
+        <article><i>04</i><strong>WHAT COULD GO WRONG?</strong><small>Uncertainty + constraints</small></article><em>→</em>
+        <article><i>05</i><strong>WHAT SHOULD BE VERIFIED?</strong><small>Outcome + audit trail</small></article>
+      </div>
+    </div>
+
+    <div class="uc-example-grid">
+      <article>
+        <span>OPERATIONAL DISRUPTION</span>
+        <h3>One event can create several downstream decisions.</h3>
+        <p>ADIE's architecture is suited to situations where the immediate event is only the start: downstream cost, customer impact, capacity and recovery choices may interact.</p>
+        <div class="uc-mini-flow"><b>EVENT</b><i></i><b>IMPACT</b><i></i><b>OPTIONS</b><i></i><b>VERIFY</b></div>
+      </article>
+      <article>
+        <span>DECISION RESTRAINT</span>
+        <h3>Doing less can be the correct system behavior.</h3>
+        <p>The Hillstrom validation demonstrated one important principle: an unsupported personalized strategy was not promoted. ADIE can preserve a safer fallback instead of forcing optimization.</p>
+        <div class="uc-highlight">UNSUPPORTED ≠ PROMOTED</div>
+      </article>
+      <article>
+        <span>BUSINESS TRANSLATION</span>
+        <h3>Technical evidence should connect to measurable consequences.</h3>
+        <p>Where the underlying data supports it, validated effects can be translated into bounded value scenarios with assumptions and limitations kept visible.</p>
+        <div class="uc-highlight">EVIDENCE → DECISION → VALUE</div>
+      </article>
+    </div>
+
+    <div class="uc-fit">
+      <div><span>WHERE ADIE FITS</span><h3>A useful ADIE problem has more than data.</h3></div>
+      <div class="uc-fit-grid">
+        <article><b>STRONG FIT CHARACTERISTICS</b>
+          <p>Several plausible actions exist</p><p>Outcomes can be observed or estimated</p><p>Uncertainty changes the acceptable action</p><p>Constraints or safety boundaries matter</p><p>Decision reasoning must be auditable</p><p>Business or operational impact can be measured</p>
+        </article>
+        <article class="uc-notfit"><b>NOT A CLAIM OF AUTOMATIC FIT</b>
+          <p>ADIE does not make missing evidence appear</p><p>It does not guarantee causal identification from arbitrary data</p><p>It does not remove the need for domain constraints</p><p>It does not prove value before a domain-specific validation</p><p>It does not replace independent production assurance</p><p>High-stakes deployment still requires appropriate human governance</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="uc-next">
+      <strong>FROM POTENTIAL APPLICATION TO EVIDENCE</strong>
+      <p>The correct next step for a new domain is not a broad performance claim. It is a scoped pilot: define the decision, baseline, measurable outcome, safety boundary and validation protocol before deployment.</p>
+    </div>
+  </section>
+
+
+
+  <section class="about-center" id="about-center">
+    <div class="ac-kicker">ABOUT ADIE / SYSTEM IDENTITY</div>
+
+    <div class="ac-head">
+      <div>
+        <h2>DECISION INTELLIGENCE BUILT AROUND EVIDENCE, RESTRAINT AND VERIFICATION.</h2>
+        <p>ADIE — Adaptive Decision Intelligence Engine — is an independent decision-intelligence system designed to connect evidence, causal reasoning, uncertainty, safety boundaries, action selection and post-decision verification.</p>
+      </div>
+      <div class="ac-mark"><strong>ADIE</strong><span>ADAPTIVE DECISION<br>INTELLIGENCE ENGINE</span></div>
+    </div>
+
+    <div class="ac-principles">
+      <article><span>01</span><strong>EVIDENCE BEFORE ASSUMPTIONS.</strong><p>A decision should expose what supports it rather than hide behind a score.</p></article>
+      <article><span>02</span><strong>UNCERTAINTY IS PRESERVED.</strong><p>Unknowns and weak evidence remain part of the decision instead of being silently erased.</p></article>
+      <article><span>03</span><strong>RESTRAINT IS A CAPABILITY.</strong><p>When evidence does not justify an intervention, fallback or HOLD can be the stronger system behavior.</p></article>
+      <article><span>04</span><strong>TRUST REQUIRES VERIFICATION.</strong><p>The reasoning path, outcome and security boundary should remain reviewable after the decision.</p></article>
+    </div>
+
+    <div class="ac-story">
+      <div class="ac-story-copy">
+        <span>WHY ADIE EXISTS</span>
+        <h3>More information does not automatically create a better decision.</h3>
+        <p>Organizations can have data, models, dashboards and alerts while still lacking a clear answer to the question that matters: <b>what action is actually supported now?</b></p>
+        <p>ADIE is built around that gap. Its architecture is intended to move from evidence to causal effect, uncertainty, candidate decisions, safety and fallback logic, holdout verification, business translation, auditability and security — without treating any one model output as unquestionable truth.</p>
+      </div>
+
+      <div class="ac-system-map">
+        <div class="ac-core"><small>SYSTEM</small><strong>ADIE</strong><em>DECISION CORE</em></div>
+        <div class="ac-orbit o1"><span>EVIDENCE</span></div>
+        <div class="ac-orbit o2"><span>CAUSAL</span></div>
+        <div class="ac-orbit o3"><span>UNCERTAINTY</span></div>
+        <div class="ac-orbit o4"><span>SAFETY</span></div>
+        <div class="ac-orbit o5"><span>VERIFY</span></div>
+        <div class="ac-orbit o6"><span>AUDIT</span></div>
+      </div>
+    </div>
+
+    <div class="ac-identity-grid">
+      <article>
+        <span>WHAT ADIE IS</span>
+        <h3>A decision-intelligence architecture.</h3>
+        <p>ADIE structures the path from evidence to an actionable, constrained and reviewable decision. It combines decision logic with validation, auditability and built-in security boundaries.</p>
+      </article>
+      <article>
+        <span>WHAT ADIE IS NOT</span>
+        <h3>Not a claim of autonomous certainty.</h3>
+        <p>ADIE does not turn missing evidence into facts, remove uncertainty by declaration, or make every domain automatically validated. Domain-specific evidence and appropriate human governance still matter.</p>
+      </article>
+      <article>
+        <span>CURRENT EVIDENCE</span>
+        <h3>Validation and security are separated from marketing claims.</h3>
+        <p>The public evidence presented on this site distinguishes the Hillstrom real-world causal validation from internal cybersecurity validation and from potential future application areas.</p>
+      </article>
+    </div>
+
+    <div class="ac-creator">
+      <div class="ac-creator-label"><span>CREATOR / SYSTEM DESIGN</span><b>RB</b></div>
+      <div class="ac-creator-copy">
+        <h3>Robert Budai</h3>
+        <strong>Creator · Designer · Developer of ADIE</strong>
+        <p>ADIE is an independently developed system project. The architecture, prototype direction, validation program and product concept are being developed around one central objective: make consequential decisions more evidence-aware, explainable, restrained and verifiable.</p>
+      </div>
+      <div class="ac-signature">
+        <small>DESIGNED & DEVELOPED BY</small>
+        <strong>Robert Budai</strong>
+        <span>ADIE / 2026</span>
+      </div>
+    </div>
+
+    <div class="ac-road">
+      <div><span>DEVELOPMENT POSITION</span><h3>Prototype evidence today. Production assurance is a separate step.</h3></div>
+      <div class="ac-road-grid">
+        <article><b>ESTABLISHED IN THE CURRENT PROJECT</b>
+          <p>Adaptive decision-intelligence architecture</p>
+          <p>Real-world Hillstrom causal validation evidence</p>
+          <p>Internal automated cybersecurity validation</p>
+          <p>Auditable and reproducible evidence approach</p>
+          <p>Interactive enterprise product prototype</p>
+        </article>
+        <article class="next"><b>NEXT ASSURANCE LAYER</b>
+          <p>Additional domain-specific validation</p>
+          <p>Scoped enterprise pilot</p>
+          <p>Independent penetration testing</p>
+          <p>Production infrastructure and monitoring</p>
+          <p>Operational SLA and deployment assurance</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="ac-contact">
+      <div>
+        <span>ADIE / ADAPTIVE DECISION INTELLIGENCE ENGINE</span>
+        <h3>Built to make the path to a decision visible.</h3>
+      </div>
+      <div class="ac-contact-status"><i></i><b>INDEPENDENTLY DEVELOPED</b><small>2026</small></div>
+    </div>
+  </section>
+
+
+  <section class="applicability" id="uses">
+    <div><span>◉</span>Retail & E-Commerce</div>
+    <div><span>▣</span>Logistics & Supply Chain</div>
+    <div><span>▥</span>Finance & Risk</div>
+    <div><span>⚙</span>Manufacturing & Operations</div>
+    <div><span>▤</span>Marketing & Analytics</div>
+    <div><span>◇</span>Public Sector & Research</div>
+  </section>
+</main>
+
+<footer>
+  <div><strong>ADIE</strong> — Adaptive Decision Intelligence Engine<br>Designed & developed by Robert Budai</div>
+  <div>© 2026 Robert Budai. All rights reserved.</div>
+  <div class="signature">Robert Budai <small>CREATOR</small></div>
+</footer>
+
+<div id="runOverlay" class="run-overlay" hidden>
+  <div class="run-orb"><span>ADIE</span></div>
+  <p id="runState">SIMULATE</p>
+</div>
+<script src="app.js"></script>
+
+  
+  <section class="documentation-center" id="documentation-center">
+    <div class="di-kicker">DOCUMENTATION / SYSTEM MAP</div>
+    <div class="di-head">
+      <h2>UNDERSTAND THE SYSTEM BEFORE YOU TRUST THE OUTPUT.</h2>
+      <p>This public documentation map connects ADIE's architecture, validation evidence, security position and application boundaries. Detailed internal implementation material remains separate from the public site.</p>
+    </div>
+    <div class="di-grid">
+      <a href="#technology" data-route="technology"><span>01</span><strong>Technology Architecture</strong><small>Evidence → causal effect → uncertainty → decision → verification.</small></a>
+      <a href="#validation-center" data-route="validation"><span>02</span><strong>Validation Evidence</strong><small>Hillstrom gates, holdout evidence, reproducibility and claim boundaries.</small></a>
+      <a href="#security-center" data-route="security"><span>03</span><strong>Security & Trust</strong><small>Authentication, authorization, isolation, auditability and fail-closed controls.</small></a>
+      <a href="#usecases-center" data-route="usecases"><span>04</span><strong>Application Boundaries</strong><small>Potential decision environments and the evidence required before domain claims.</small></a>
+    </div>
+    <div class="di-note"><b>PUBLIC DOCUMENTATION STATUS</b><p>The website summarizes verified project evidence and architecture. It is not a substitute for deployment documentation, API reference, security assessment reports or production runbooks.</p></div>
+  </section>
+
+  <section class="contact-center inquiry-center" id="contact-center">
+    <div class="inquiry-intro"><span>CONTACT / ENTERPRISE INQUIRY</span><h2>START WITH THE DECISION PROBLEM.</h2><p>Describe a concrete decision, the available evidence and what a successful outcome would mean. This is an inquiry, not a commitment to a pilot.</p><div class="inquiry-flow">DEFINE <b>→</b> VALIDATE <b>→</b> EXPLORE A PILOT</div></div>
+    <div class="inquiry-shell"><div class="inquiry-topline"><strong>ENTERPRISE INQUIRY / SUBMISSION NOT YET AVAILABLE</strong><span id="inquiryConnection">SETUP REQUIRED</span></div>
+    <form id="adieInquiry" novalidate autocomplete="on">
+      <div class="inquiry-grid"><label>Company / organization <em>*</em><input name="company" autocomplete="organization" required maxlength="120" placeholder="Organization name"></label><label>Your name <em>*</em><input name="name" autocomplete="name" required maxlength="120" placeholder="Full name"></label></div>
+      <label>Business e-mail <em>*</em><input name="email" type="email" autocomplete="email" required maxlength="254" placeholder="name@company.com"></label>
+      <label>Type of inquiry <em>*</em><select name="interest" required><option value="">Select an option</option><option>Enterprise pilot</option><option>Technical demonstration</option><option>Research collaboration</option><option>Strategic partnership</option><option>General inquiry</option></select></label>
+      <label>What decision problem are you trying to solve? <em>*</em><textarea name="problem" required minlength="15" maxlength="2000" rows="4" placeholder="Describe the decision and the current baseline. Do not include confidential information."></textarea></label>
+      <label>What evidence or data is available? <small>Optional</small><textarea name="evidence" maxlength="1000" rows="2" placeholder="Describe data categories only; do not upload or paste sensitive data."></textarea></label>
+      <label>What would a successful outcome look like? <small>Optional</small><textarea name="outcome" maxlength="1000" rows="2" placeholder="Measurable outcome or success criteria."></textarea></label>
+      <div class="inquiry-honeypot" aria-hidden="true"><label>Leave this field blank<input name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
+      <label class="inquiry-consent"><input type="checkbox" name="consent" value="yes" required><span>I agree that the information I submit may be processed to respond to my inquiry. <em>*</em></span></label>
+      <p class="inquiry-privacy">Do not submit passwords, API keys, personal health information or confidential business data. Before enabling submissions, publish a privacy notice identifying the controller, form provider, retention period and data-subject rights. The form provider processes the submission; ADIE does not expose its private admin API.</p>
+      <button type="submit" id="inquirySubmit" disabled>SUBMIT ENTERPRISE INQUIRY <span aria-hidden="true">↗</span></button>
+      <p id="inquiryStatus" class="inquiry-status" role="status" aria-live="polite">Submission is disabled until the form service is configured and a privacy notice is published.</p>
+    </form></div>
+  </section>
+
+
+  <script src="inquiry-config.js" defer></script>
+  <script src="inquiry.js" defer></script>
+  <footer class="adie-official-footer" id="adie-official-footer">
+    <strong>ADIE — Adaptive Decision Intelligence Engine</strong>
+    <span>Designed &amp; developed by Robert Budai</span>
+    <small>© 2026 Robert Budai. All rights reserved.</small>
+  </footer>
+
+</body>
+</html>
