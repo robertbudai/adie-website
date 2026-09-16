@@ -761,6 +761,14 @@ document.querySelectorAll('.panel-btn').forEach(a=>{
  });
 })();
 
+const gateTargets = {
+  Problem: 'h1',
+  Evidence: 'h2',
+  Decision: 'h5',
+  Uncertainty: 'h6',
+  Verification: 'h8',
+  'Business Impact': 'h7'
+};
 // V12.5 — evidence walkthrough. No backend calls, no invented live results.
 (() => {
  const data = {
@@ -787,8 +795,61 @@ document.querySelectorAll('.panel-btn').forEach(a=>{
  function render(){
    root.querySelectorAll('[data-journey]').forEach(b=>{const active=b.dataset.journey===lane;b.classList.toggle('tj-selected',active);b.setAttribute('aria-pressed',String(active));});
    steps.replaceChildren();data[lane].forEach((item,i)=>{const b=document.createElement('button');b.type='button';b.className=i===index?'tj-selected':'';b.setAttribute('aria-pressed',String(i===index));const n=document.createElement('span');n.textContent=String(i+1).padStart(2,'0')+' / 06';b.append(n,document.createTextNode(item[0]));b.addEventListener('click',()=>{index=i;render();});steps.append(b);});
-   const item=data[lane][index];el('tjStepNumber').textContent=String(index+1).padStart(2,'0')+' / 06';el('tjEvidenceType').textContent=lane==='decision'?'DECISION EVIDENCE':'SYSTEM CONTROL';
-   ['tjStepTitle','tjStepQuestion','tjStepProof','tjStepLimit','tjStepSource'].forEach((id,i)=>el(id).textContent=item[i]);el('tjEvidenceLink').href=item[5];el('tjEvidenceLink').textContent=item[5]==='#validation-center'?'OPEN VALIDATION EVIDENCE ↗':'OPEN SECURITY EVIDENCE ↗';
+   const item=data[lane][index];
+   el('tjStepNumber').textContent=String(index+1).padStart(2,'0')+' / 06';
+   el('tjEvidenceType').textContent=lane==='decision'?'DECISION EVIDENCE':'SYSTEM CONTROL';
+   ['tjStepTitle','tjStepQuestion','tjStepProof','tjStepLimit','tjStepSource'].forEach((id,i)=>el(id).textContent=item[i]);
+
+   const targetGate=lane==='decision'?gateTargets[item[0]]:null;
+
+   const securityTargets = {
+     Identity: 'auth',
+     Authorization: 'rbac',
+     Isolation: 'tenant',
+     Integrity: 'integrity',
+     Audit: 'audit',
+     'Security Verification': 'closed'
+   };
+
+   const targetSecurity=lane==='system'?securityTargets[item[0]]:null;
+   const evidenceLink=el('tjEvidenceLink');
+
+   evidenceLink.href=lane==='decision'
+     ?'#validation-center'
+     :'#security-center';
+
+   evidenceLink.textContent=lane==='decision'
+     ?'OPEN H'+(targetGate?targetGate.slice(1):'')+' VALIDATION EVIDENCE ↗'
+     :'OPEN SECURITY CONTROL ↗';
+
+   evidenceLink.onclick=e=>{
+     e.preventDefault();
+
+     if(lane==='decision'){
+       const gate=targetGate
+         ?document.querySelector('.vc-gate[data-gate="'+targetGate+'"]')
+         :null;
+
+       if(gate) gate.click();
+
+       document.querySelector('#validation-center')?.scrollIntoView({
+         behavior:'smooth',
+         block:'start'
+       });
+       return;
+     }
+
+     const securityControl=targetSecurity
+       ?document.querySelector('.sc-control[data-sec="'+targetSecurity+'"]')
+       :null;
+
+     if(securityControl) securityControl.click();
+
+     document.querySelector('#security-center')?.scrollIntoView({
+       behavior:'smooth',
+       block:'start'
+     });
+   };
  }
  root.querySelectorAll('[data-journey]').forEach(b=>b.addEventListener('click',()=>{lane=b.dataset.journey;index=0;render();}));render();
 })();
