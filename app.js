@@ -1,15 +1,76 @@
 
-const overlay=document.getElementById('runOverlay');
-const state=document.getElementById('runState');
-const steps=['SIMULATE','ANALYZE','DECIDE','VERIFY'];
+// Public RUN demo: frozen historical Hillstrom point estimate, not a live ADIE engine.
+const overlay = document.getElementById('runOverlay');
+const state = document.getElementById('runState');
+const coreStatus = document.getElementById('coreStatus');
+let demoBusy = false;
 function runSequence(){
-  overlay.hidden=false; let i=0; state.textContent=steps[0];
-  const timer=setInterval(()=>{i++; if(i>=steps.length){clearInterval(timer);setTimeout(()=>overlay.hidden=true,650);return;} state.textContent=steps[i];},650);
+  if(demoBusy || !overlay) return;
+  demoBusy = true;
+  overlay.hidden = false;
+  document.body.classList.add('adie-demo-open');
+  document.getElementById('demoResults').hidden = true;
+  document.getElementById('demoInputs').hidden = false;
+  state.textContent = 'PUBLIC HISTORICAL DEMO / READY';
+  if(coreStatus) coreStatus.textContent = 'DEMO READY';
+  document.getElementById('demoCustomers').focus();
 }
-document.getElementById('runDemo').addEventListener('click',runSequence);
-document.getElementById('coreRun').addEventListener('click',runSequence);
-overlay.addEventListener('click',()=>overlay.hidden=true);
-
+function closeDemo(){
+  overlay.hidden = true;
+  demoBusy = false;
+  document.body.classList.remove('adie-demo-open');
+  document.querySelector('.visual-stage')?.classList.remove('running');
+  if(coreStatus) coreStatus.textContent = 'SYSTEM READY';
+}
+function calculateDemo(){
+  const customers = Number(document.getElementById('demoCustomers').value);
+  const cost = Number(document.getElementById('demoCost').value);
+  const status = document.getElementById('demoError');
+  status.textContent = '';
+  if(!Number.isSafeInteger(customers) || customers < 1 || customers > 1000000 ||
+     !Number.isFinite(cost) || cost < 0 || cost > 10){
+    status.textContent = 'Enter 1–1,000,000 customers and a delivery cost from $0 to $10.';
+    state.textContent = 'INPUT REJECTED';
+    if(coreStatus) coreStatus.textContent = 'INPUT REJECTED';
+    return;
+  }
+  const estimate = 0.9694, lower = 0.3543, upper = 1.5845;
+  const gross = customers * estimate;
+  const delivery = customers * cost;
+  const afterAssumedCost = gross - delivery;
+  const valid = [gross,delivery,afterAssumedCost,customers*lower,customers*upper].every(Number.isFinite)
+    && Math.abs((gross-delivery)-afterAssumedCost) < 0.000001;
+  if(!valid){
+    status.textContent = 'Calculation could not be verified; no result is shown.';
+    state.textContent = 'CHECK FAILED';
+    if(coreStatus) coreStatus.textContent = 'CHECK FAILED';
+    return;
+  }
+  const money = value => new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0}).format(value);
+  const result = document.getElementById('demoResults');
+  result.querySelector('[data-result="gross"]').textContent = money(gross);
+  result.querySelector('[data-result="range"]').textContent = money(customers*lower)+' – '+money(customers*upper);
+  result.querySelector('[data-result="cost"]').textContent = money(delivery);
+  result.querySelector('[data-result="net"]').textContent = money(afterAssumedCost);
+  result.querySelector('[data-result="check"]').textContent = 'PASS — arithmetic and input bounds only';
+  document.getElementById('demoInputs').hidden = true;
+  result.hidden = false;
+  state.textContent = 'ILLUSTRATIVE RESULT / CHECK COMPLETE';
+  if(coreStatus) coreStatus.textContent = 'DEMO CHECK COMPLETE';
+}
+if(overlay){
+  document.getElementById('demoClose').addEventListener('click',closeDemo);
+  document.getElementById('demoCalculate').addEventListener('click',calculateDemo);
+  document.getElementById('demoAgain').addEventListener('click',()=>{
+    document.getElementById('demoResults').hidden=true;
+    document.getElementById('demoInputs').hidden=false;
+    state.textContent='PUBLIC HISTORICAL DEMO / READY';
+    if(coreStatus) coreStatus.textContent='DEMO READY';
+    document.getElementById('demoCustomers').focus();
+  });
+  overlay.addEventListener('click',event=>{if(event.target===overlay)closeDemo();});
+  document.addEventListener('keydown',event=>{if(event.key==='Escape' && !overlay.hidden)closeDemo();});
+}
 
 // V7.1 — subtle pointer-reactive cinematic layer.
 // The movement is deliberately restrained so the master composition never breaks.
@@ -51,52 +112,10 @@ document.querySelectorAll('.validation-hot,.security-hot,.core-run,.action').for
 });
 
 
-// =========================================================
-// V7.5 — Live HUD interaction and ADIE Core state machine
-// =========================================================
+// V7.5 — visual pointer layer; RUN orchestration is centralized above.
 const liveStage = document.querySelector('.visual-stage');
 const liveCore = document.querySelector('.core-live-layer');
 const hudCursor = document.querySelector('.hud-cursor');
-const coreStatus = document.getElementById('coreStatus');
-const liveRunButtons = [
-  document.getElementById('runDemo'),
-  document.getElementById('coreRun')
-].filter(Boolean);
-
-const liveSteps = [
-  ['SIMULATE','SIMULATING'],
-  ['ANALYZE','ANALYZING'],
-  ['DECIDE','DECISION READY'],
-  ['VERIFY','VERIFYING']
-];
-
-let liveBusy = false;
-
-function liveCoreSequence(){
-  if(liveBusy) return;
-  liveBusy = true;
-  liveStage?.classList.add('running');
-  let n = 0;
-  if(coreStatus) coreStatus.textContent = liveSteps[0][1];
-
-  const ticker = setInterval(()=>{
-    n++;
-    if(n >= liveSteps.length){
-      clearInterval(ticker);
-      if(coreStatus) coreStatus.textContent = 'VERIFIED';
-      setTimeout(()=>{
-        liveStage?.classList.remove('running');
-        if(coreStatus) coreStatus.textContent = 'SYSTEM READY';
-        liveBusy = false;
-      },850);
-      return;
-    }
-    if(coreStatus) coreStatus.textContent = liveSteps[n][1];
-  },620);
-}
-
-// Existing demo overlay remains functional; this adds synchronized core feedback.
-liveRunButtons.forEach(btn=>btn.addEventListener('click',liveCoreSequence));
 
 if(liveStage && liveCore){
   liveStage.addEventListener('pointermove',e=>{
@@ -598,19 +617,6 @@ document.querySelectorAll('.panel-btn').forEach(a=>{
     a.addEventListener('click', e => { e.preventDefault(); go(map[a.dataset.route]); });
   });
 
-  // RUN DEMO remains a safe public interaction for now:
-  // it runs the existing visual state machine, but never exposes the admin console.
-  document.querySelectorAll('a,button').forEach(el => {
-    const label = el.textContent.trim().toUpperCase().replace(/\s+/g,' ');
-    if (label === 'RUN DEMO' && !el.dataset.v121Bound) {
-      el.dataset.v121Bound='1';
-      el.addEventListener('click', () => {
-        const coreRun = document.querySelector('.core-run');
-        if (coreRun && coreRun !== el) coreRun.click();
-      });
-    }
-  });
-
   // Active menu state follows the visible section.
   const observed = [
     ['HOME', document.body],
@@ -657,15 +663,6 @@ document.querySelectorAll('.panel-btn').forEach(a=>{
    });
  });
 
- function runPublicDemo(){
-   const candidates=[...document.querySelectorAll('.core-run, [data-run], .action')];
-   const existing=candidates.find(x=>x.textContent.trim().toUpperCase()==='RUN' || x.textContent.trim().toUpperCase().includes('RUN DEMO'));
-   if(existing && !existing.classList.contains('hero-zone')) existing.click();
-   else {
-     document.body.classList.add('public-demo-running');
-     setTimeout(()=>document.body.classList.remove('public-demo-running'),2600);
-   }
- }
  document.querySelectorAll('.hero-zone[data-hero-action]').forEach(btn=>{
    btn.addEventListener('click',()=>{
      const action=btn.dataset.heroAction;
