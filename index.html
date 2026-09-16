@@ -672,9 +672,28 @@
   <div class="signature">Robert Budai <small>CREATOR</small></div>
 </footer>
 
-<div id="runOverlay" class="run-overlay" hidden>
-  <div class="run-orb"><span>ADIE</span></div>
-  <p id="runState">SIMULATE</p>
+<div id="runOverlay" class="run-overlay" hidden role="dialog" aria-modal="true" aria-labelledby="demoTitle">
+  <section class="demo-panel">
+    <button type="button" id="demoClose" class="demo-close" aria-label="Close public demo">✕ CLOSE</button>
+    <div class="demo-kicker">ADIE / PUBLIC INTERACTIVE WALKTHROUGH</div>
+    <h2 id="demoTitle">HILLSTROM DECISION IMPACT</h2>
+    <p id="runState" role="status" aria-live="polite">PUBLIC HISTORICAL DEMO / READY</p>
+    <p class="demo-disclosure">Browser-only illustration using a frozen historical randomized experiment estimate. No private ADIE API, live inference, new causal estimation or customer data is involved.</p>
+    <div id="demoInputs">
+      <p><strong>Problem:</strong> Estimate the illustrative gross impact of the previously validated Men's E-Mail fallback versus No E-Mail.</p>
+      <div class="demo-fields"><label>Campaign size (customers)<input id="demoCustomers" type="number" min="1" max="1000000" step="1" value="100000" inputmode="numeric"></label><label>Assumed delivery cost / customer (USD)<input id="demoCost" type="number" min="0" max="10" step="0.01" value="0.25" inputmode="decimal"></label></div>
+      <p class="demo-facts"><strong>Frozen evidence:</strong> estimated incremental gross revenue $0.9694/customer; 95% interval $0.3543–$1.5845/customer; 12,788 reserved holdout records.</p>
+      <p id="demoError" role="alert"></p>
+      <button type="button" id="demoCalculate" class="demo-primary">CALCULATE ILLUSTRATIVE IMPACT →</button>
+    </div>
+    <div id="demoResults" hidden aria-live="polite">
+      <div class="demo-metrics"><div><small>ESTIMATED GROSS INCREMENTAL REVENUE</small><strong data-result="gross"></strong></div><div><small>95% ESTIMATE INTERVAL (GROSS)</small><strong data-result="range"></strong></div><div><small>ASSUMED DELIVERY COST</small><strong data-result="cost"></strong></div><div><small>ESTIMATE AFTER ASSUMED DELIVERY COST</small><strong data-result="net"></strong></div></div>
+      <p><strong>Decision:</strong> Historical frozen fallback: Men's E-Mail vs No E-Mail. This demo does not select a new treatment.</p>
+      <p><strong>Verification:</strong> <span data-result="check"></span>. This is not a rerun of Hillstrom validation or a live engine verification.</p>
+      <p class="demo-disclosure">Illustrative arithmetic, not realized ROI, audited net profit, prospective performance or a customer pilot. The historical 95% interval is not a future guarantee. See the Validation Center for the stated evidence boundary.</p>
+      <div class="demo-actions"><button type="button" id="demoAgain" class="demo-primary">CHANGE ASSUMPTIONS</button><a href="#validation-center" onclick="document.getElementById('demoClose').click()">OPEN VALIDATION ↗</a></div>
+    </div>
+  </section>
 </div>
 <script src="app.js"></script>
 
