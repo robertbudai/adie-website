@@ -1,0 +1,78 @@
+{
+  "contrast_identity_max_error": 0.0,
+  "contrasts": [
+    {
+      "effect": {
+        "confidence_interval_high": 0.03842800876153122,
+        "confidence_interval_low": 0.024284905367425304,
+        "confidence_level": 0.95,
+        "control": "Womens E-Mail",
+        "control_sample_size": 21387,
+        "estimate": 0.03135645706447826,
+        "method": "randomized_difference_in_means_welch",
+        "outcome": "visit",
+        "p_value_two_sided": 3.5985802758497465e-18,
+        "standard_error": 0.003608000837174793,
+        "treatment": "Mens E-Mail",
+        "treatment_sample_size": 21307,
+        "z_statistic": 8.690812025706624
+      },
+      "familywise_significant": true,
+      "holm_adjusted_p_value": 1.079574082754924e-17,
+      "outcome": "visit",
+      "preferred_treatment": "Mens E-Mail"
+    },
+    {
+      "effect": {
+        "confidence_interval_high": 0.00564443098024286,
+        "confidence_interval_low": 0.001743467036818014,
+        "confidence_level": 0.95,
+        "control": "Womens E-Mail",
+        "control_sample_size": 21387,
+        "estimate": 0.003693949008530437,
+        "method": "randomized_difference_in_means_welch",
+        "outcome": "conversion",
+        "p_value_two_sided": 0.00020570385066017647,
+        "standard_error": 0.0009951621494566107,
+        "treatment": "Mens E-Mail",
+        "treatment_sample_size": 21307,
+        "z_statistic": 3.711906658173693
+      },
+      "familywise_significant": true,
+      "holm_adjusted_p_value": 0.00041140770132035295,
+      "outcome": "conversion",
+      "preferred_treatment": "Mens E-Mail"
+    },
+    {
+      "effect": {
+        "confidence_interval_high": 0.6582593243529711,
+        "confidence_interval_low": 0.032570555562908554,
+        "confidence_level": 0.95,
+        "control": "Womens E-Mail",
+        "control_sample_size": 21387,
+        "estimate": 0.3454149399579398,
+        "method": "randomized_difference_in_means_welch",
+        "outcome": "spend",
+        "p_value_two_sided": 0.030462977056477544,
+        "standard_error": 0.1596174148416542,
+        "treatment": "Mens E-Mail",
+        "treatment_sample_size": 21307,
+        "z_statistic": 2.164017881761855
+      },
+      "familywise_significant": true,
+      "holm_adjusted_p_value": 0.030462977056477544,
+      "outcome": "spend",
+      "preferred_treatment": "Mens E-Mail"
+    }
+  ],
+  "deterministic": true,
+  "familywise_alpha": 0.05,
+  "left_treatment": "Mens E-Mail",
+  "multiplicity_method": "Holm family-wise error correction",
+  "outcomes": [
+    "visit",
+    "conversion",
+    "spend"
+  ],
+  "right_treatment": "Womens E-Mail"
+}

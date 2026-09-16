@@ -1,0 +1,12 @@
+﻿ADIE HILLSTROM VALIDATION FREEZE
+Freeze UTC: 2026-09-15T20:30:04Z
+PowerShell: 5.1.26100.9444
+Python: Python 3.14.6
+pytest: pytest 9.1.1
+Platform: Microsoft Windows NT 10.0.26200.0
+Dataset SHA256: 0E5893329D8B93CEFECC571777672028290AB69865718020C78C7284F291AECE
+Hillstrom gates: PASS 8/8
+Validation tests: PASS 88/88
+Full regression: PASS 2719/2719; warnings=2; duration=488.89s
+Nexus dependency: NONE
+Raw dataset included in publication: NO

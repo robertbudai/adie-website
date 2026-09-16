@@ -396,9 +396,9 @@ document.querySelectorAll('.panel-btn').forEach(a=>{
     h3:{
       title:'Six randomized treatment effects were recovered.',
       claim:'ADIE can recover the defined aggregate randomized treatment effects in this benchmark.',
-      method:'Randomized difference in means with Welch standard errors; compare against an independent reference.',
+      method:'Randomized difference in means with Welch standard errors; compare against a separately calculated reference (not an external audit).',
       evidence:"Men's and Women's E-Mail effects were recovered for visit, conversion and spend.",
-      result:'Six effects recovered; independent reference maximum error = 0.0.',
+      result:'Six effects recovered; separate reference-calculation maximum error = 0.0.',
       limit:'This is evidence for the defined randomized aggregate effects, not proof of accuracy for arbitrary causal interventions.'
     },
     h4:{
@@ -421,7 +421,7 @@ document.querySelectorAll('.panel-btn').forEach(a=>{
       title:'The frozen fallback remained positive on unseen evidence.',
       claim:'The promoted global fallback should generalize to the reserved Hillstrom partition.',
       method:'Freeze the global fallback and evaluate it on the untouched H6 holdout.',
-      evidence:"12,788 reserved records; Men's E-Mail vs No E-Mail: +8.2444% visit, +1.0214% conversion, +$0.9694 gross revenue/customer.",
+      evidence:"12,788 reserved records; Men's E-Mail vs No E-Mail: +8.2444 percentage points visit, +1.0214 percentage points conversion, +$0.9694 gross revenue/customer.",
       result:'Reserved holdout generalization: PASS.',
       limit:'This supports generalization to the reserved Hillstrom partition, not to a future company or future time period.'
     },
@@ -437,9 +437,9 @@ document.querySelectorAll('.panel-btn').forEach(a=>{
       title:'The evidence state is deterministic and hash-verifiable.',
       claim:'The validation result should be reproducible and its evidence artifacts integrity-checkable.',
       method:'Record deterministic recomputation, source-data identity, artifact hashes and a frozen validation state.',
-      evidence:'8/8 gates; 88/88 validation tests; 2719/2719 regression tests; 0 failures; dataset and computation SHA-256 recorded.',
+      evidence:'Freeze record reports 8/8 gates, 88/88 validation tests, 2719/2719 regression tests, 2 warnings; dataset and computation SHA-256 recorded.',
       result:'Reproducibility, integrity and claim controls: PASS.',
-      limit:'Hash-verifiable internal evidence is not independent external certification or production-readiness evidence.'
+      limit:'Checksums verify consistency with the recorded manifest, not correctness. Full pytest log, independent audit and production-readiness evidence are not published.'
     }
   };
 
@@ -453,6 +453,15 @@ document.querySelectorAll('.panel-btn').forEach(a=>{
     el('vcEvidence').textContent=d.evidence;
     el('vcResult').textContent=d.result;
     el('vcLimit').textContent=d.limit;
+    const artifactFiles={h3:'h3_causal_effects.json',h4:'h4_treatment_discrimination.json',h5:'h5_individualized_policy.json',h6:'h6_reserved_generalization.json',h7:'h7_business_value_roi.json',h8:'h8_reproducibility_manifest.json'};
+    const artifact=artifactFiles[key];
+    const row=el('vcArtifactRow'),link=el('vcArtifactLink'),note=el('vcArtifactNote');
+    row.hidden=!artifact;
+    if(artifact){
+      link.href='evidence/'+artifact;
+      link.textContent=key==='h8'?'OPEN H8 MANIFEST [LINK]':'OPEN '+key.toUpperCase()+' JSON EVIDENCE [LINK]';
+      note.textContent=key==='h8'?'Freeze record and disclosure below.':'Original artifact, checksum recorded in H8 manifest.';
+    }
   }
   gates.forEach(g=>g.addEventListener('click',()=>activate(g)));
   activate(gates[0]);

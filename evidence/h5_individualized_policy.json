@@ -1,0 +1,41 @@
+{
+  "baseline_action": "Mens E-Mail",
+  "baseline_value": 1.5826002317497103,
+  "candidate_actions": [
+    [
+      [
+        "0",
+        "1"
+      ],
+      "Womens E-Mail"
+    ],
+    [
+      [
+        "1",
+        "0"
+      ],
+      "Mens E-Mail"
+    ],
+    [
+      [
+        "1",
+        "1"
+      ],
+      "Mens E-Mail"
+    ]
+  ],
+  "candidate_value": 1.4795120656045313,
+  "confidence_interval_high": 0.35404382882731805,
+  "confidence_interval_low": -0.560220161117676,
+  "deployed_policy": "GLOBAL_FALLBACK:Mens E-Mail",
+  "deterministic": true,
+  "h6_holdout_used": false,
+  "incremental_standard_error": 0.23323489542578127,
+  "incremental_value": -0.10308816614517902,
+  "promoted": false,
+  "reserved_h6_rows": 12788,
+  "split_uses_outcomes": false,
+  "train_rows": 38549,
+  "training_uses_validation_outcomes": false,
+  "validation_rows": 12663
+}

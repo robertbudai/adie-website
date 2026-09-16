@@ -1219,3 +1219,13 @@ body.adie-demo-open{overflow:hidden}
 #demoError{color:#ff9e9e!important;min-height:1em}
 .demo-panel [hidden]{display:none!important}
 @media(max-width:600px){.demo-fields,.demo-metrics{grid-template-columns:1fr}.demo-panel{max-height:calc(100dvh - 24px);width:calc(100vw - 24px)}.run-overlay{padding:12px}}
+
+/* Public Hillstrom evidence links; scoped to Validation Center. */
+.validation-center .vc-artifact-row{margin-top:12px;padding:12px;border:1px solid rgba(0,238,255,.22);background:rgba(0,24,36,.55);display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center}
+.validation-center .vc-artifact-row[hidden]{display:none}
+.validation-center .vc-artifact-row a,.validation-center .vc-public-evidence a{color:#00e9f7;text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}
+.validation-center .vc-artifact-row a{font-size:12px;font-weight:800;letter-spacing:.05em}
+.validation-center .vc-artifact-row span{font-size:11px;color:#9ab9c3;line-height:1.45}
+.validation-center .vc-public-evidence{margin-top:12px;padding:16px;border:1px solid rgba(0,238,255,.22);background:rgba(0,17,28,.65)}
+.validation-center .vc-public-evidence strong{color:#00e9f7;font-size:11px;letter-spacing:.12em}
+.validation-center .vc-public-evidence p{color:#9ab9c3;font-size:12px;line-height:1.6;margin:9px 0 0}

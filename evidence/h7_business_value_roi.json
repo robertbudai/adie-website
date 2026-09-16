@@ -1,0 +1,121 @@
+{
+  "break_even_marginal_cost_conservative": 0.35433643731993003,
+  "break_even_marginal_cost_point": 0.969434390971224,
+  "claim_scope": "incremental gross revenue and value after assumed marginal delivery cost; not net profit",
+  "comparator": "No E-Mail",
+  "conservative_revenue_per_customer": 0.35433643731993003,
+  "cost_status": "scenario assumptions; actual campaign costs were not supplied",
+  "currency": "USD (as represented by the source spend field)",
+  "excluded_costs": [
+    "cost of goods sold",
+    "fixed campaign cost",
+    "tax",
+    "returns",
+    "capacity effects"
+  ],
+  "outcome": "spend",
+  "point_revenue_per_customer": 0.969434390971224,
+  "scenarios": [
+    {
+      "assumed_marginal_cost_per_customer": 0.05,
+      "audience_size": 10000,
+      "conservative_gross_incremental_revenue": 3543.3643731993,
+      "conservative_revenue_roi_percent": 608.6728746398601,
+      "conservative_value_after_marginal_cost": 3043.3643731993,
+      "expected_gross_incremental_revenue": 9694.34390971224,
+      "expected_revenue_roi_percent": 1838.8687819424479,
+      "expected_value_after_marginal_cost": 9194.34390971224,
+      "total_assumed_marginal_cost": 500.0
+    },
+    {
+      "assumed_marginal_cost_per_customer": 0.1,
+      "audience_size": 10000,
+      "conservative_gross_incremental_revenue": 3543.3643731993,
+      "conservative_revenue_roi_percent": 254.33643731993004,
+      "conservative_value_after_marginal_cost": 2543.3643731993,
+      "expected_gross_incremental_revenue": 9694.34390971224,
+      "expected_revenue_roi_percent": 869.4343909712239,
+      "expected_value_after_marginal_cost": 8694.34390971224,
+      "total_assumed_marginal_cost": 1000.0
+    },
+    {
+      "assumed_marginal_cost_per_customer": 0.25,
+      "audience_size": 10000,
+      "conservative_gross_incremental_revenue": 3543.3643731993,
+      "conservative_revenue_roi_percent": 41.734574927972005,
+      "conservative_value_after_marginal_cost": 1043.3643731993002,
+      "expected_gross_incremental_revenue": 9694.34390971224,
+      "expected_revenue_roi_percent": 287.7737563884895,
+      "expected_value_after_marginal_cost": 7194.343909712239,
+      "total_assumed_marginal_cost": 2500.0
+    },
+    {
+      "assumed_marginal_cost_per_customer": 0.05,
+      "audience_size": 100000,
+      "conservative_gross_incremental_revenue": 35433.643731993005,
+      "conservative_revenue_roi_percent": 608.6728746398601,
+      "conservative_value_after_marginal_cost": 30433.643731993005,
+      "expected_gross_incremental_revenue": 96943.43909712239,
+      "expected_revenue_roi_percent": 1838.8687819424479,
+      "expected_value_after_marginal_cost": 91943.43909712239,
+      "total_assumed_marginal_cost": 5000.0
+    },
+    {
+      "assumed_marginal_cost_per_customer": 0.1,
+      "audience_size": 100000,
+      "conservative_gross_incremental_revenue": 35433.643731993005,
+      "conservative_revenue_roi_percent": 254.33643731993004,
+      "conservative_value_after_marginal_cost": 25433.643731993005,
+      "expected_gross_incremental_revenue": 96943.43909712239,
+      "expected_revenue_roi_percent": 869.4343909712239,
+      "expected_value_after_marginal_cost": 86943.43909712239,
+      "total_assumed_marginal_cost": 10000.0
+    },
+    {
+      "assumed_marginal_cost_per_customer": 0.25,
+      "audience_size": 100000,
+      "conservative_gross_incremental_revenue": 35433.643731993005,
+      "conservative_revenue_roi_percent": 41.73457492797202,
+      "conservative_value_after_marginal_cost": 10433.643731993005,
+      "expected_gross_incremental_revenue": 96943.43909712239,
+      "expected_revenue_roi_percent": 287.7737563884895,
+      "expected_value_after_marginal_cost": 71943.43909712239,
+      "total_assumed_marginal_cost": 25000.0
+    },
+    {
+      "assumed_marginal_cost_per_customer": 0.05,
+      "audience_size": 1000000,
+      "conservative_gross_incremental_revenue": 354336.43731993,
+      "conservative_revenue_roi_percent": 608.67287463986,
+      "conservative_value_after_marginal_cost": 304336.43731993,
+      "expected_gross_incremental_revenue": 969434.3909712239,
+      "expected_revenue_roi_percent": 1838.8687819424479,
+      "expected_value_after_marginal_cost": 919434.3909712239,
+      "total_assumed_marginal_cost": 50000.0
+    },
+    {
+      "assumed_marginal_cost_per_customer": 0.1,
+      "audience_size": 1000000,
+      "conservative_gross_incremental_revenue": 354336.43731993,
+      "conservative_revenue_roi_percent": 254.33643731992998,
+      "conservative_value_after_marginal_cost": 254336.43731993,
+      "expected_gross_incremental_revenue": 969434.3909712239,
+      "expected_revenue_roi_percent": 869.4343909712239,
+      "expected_value_after_marginal_cost": 869434.3909712239,
+      "total_assumed_marginal_cost": 100000.0
+    },
+    {
+      "assumed_marginal_cost_per_customer": 0.25,
+      "audience_size": 1000000,
+      "conservative_gross_incremental_revenue": 354336.43731993,
+      "conservative_revenue_roi_percent": 41.734574927972,
+      "conservative_value_after_marginal_cost": 104336.43731993,
+      "expected_gross_incremental_revenue": 969434.3909712239,
+      "expected_revenue_roi_percent": 287.7737563884896,
+      "expected_value_after_marginal_cost": 719434.3909712239,
+      "total_assumed_marginal_cost": 250000.0
+    }
+  ],
+  "treatment": "Mens E-Mail",
+  "upper_revenue_per_customer": 1.584532344622518
+}

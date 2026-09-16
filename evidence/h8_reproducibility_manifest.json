@@ -1,0 +1,19 @@
+{
+  "computation_sha256": "05799a4376e4c62decc2811f28d4189c30869ba996995d7f2f41feb7f7ed39b0",
+  "dataset": {
+    "attribution": "Kevin Hillstrom / MineThatData \u2014 E-Mail Analytics and Data Mining Challenge (2008-03-20)",
+    "redistributed": false,
+    "sha256": "0e5893329d8b93cefecc571777672028290ab69865718020c78c7284f291aece"
+  },
+  "evidence_sha256": {
+    "h3_causal_effects.json": "b7cfc0e2e850ef00a11076042c71c56c9bfb20b69a36bfd594ae60414cb172cc",
+    "h4_treatment_discrimination.json": "2afe569bbd7f762a1f7dc316f5bce85e1a2d92f7bb6ae3884fab8728379e7504",
+    "h5_individualized_policy.json": "f28f32a6e39cace2ed9af09bf2a12d74234b9074ce544a44851f22153593be0a",
+    "h6_reserved_generalization.json": "a75be8242f3487b0fdccc1b29eaaf1ccd661a52af2ba33747bb1464190b6582c",
+    "h7_business_value_roi.json": "d71fb329627dd6ea12c69f82c66c3ea8bd7bbb779fa52557d208c668d64a7ca3"
+  },
+  "limitations_disclosed": true,
+  "nexus_dependency": false,
+  "report_sha256": "1b5958ea86371e333bd2883effc45d352bfb447a8a5dc01020aeb3a00fcfc33a",
+  "validation_status": "PASS 8/8"
+}
