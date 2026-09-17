@@ -1519,3 +1519,128 @@ body.adie-demo-open{overflow:hidden}
 /* HERO CYBER POSITION v3 */
 .hero-cyber-card{top:0.8%;right:0.8%;}
 
+
+/* ADIE LIVING NEURAL CORE v1 */
+.core-orbit-pulse{
+  position:absolute;
+  z-index:3;
+  left:50%;
+  top:50%;
+  width:6px;
+  height:6px;
+  margin:-3px 0 0 -3px;
+  border-radius:50%;
+  pointer-events:none;
+  background:#eaffff;
+  box-shadow:
+    0 0 5px #ffffff,
+    0 0 11px #63f7ff,
+    0 0 20px rgba(0,234,255,.9),
+    0 0 34px rgba(0,234,255,.42);
+  transform-origin:center;
+}
+
+.pulse-a{
+  animation:coreOrbitA 7.5s linear infinite;
+}
+.pulse-b{
+  width:5px;
+  height:5px;
+  margin:-2.5px 0 0 -2.5px;
+  opacity:.82;
+  animation:coreOrbitB 10.5s linear infinite reverse;
+}
+.pulse-c{
+  width:4px;
+  height:4px;
+  margin:-2px 0 0 -2px;
+  opacity:.68;
+  animation:coreOrbitC 6.2s linear infinite;
+}
+
+@keyframes coreOrbitA{
+  from{transform:rotate(0deg) translateX(72px) rotate(0deg)}
+  to{transform:rotate(360deg) translateX(72px) rotate(-360deg)}
+}
+@keyframes coreOrbitB{
+  from{transform:rotate(35deg) translateX(53px) scale(.8)}
+  50%{filter:brightness(1.7);opacity:1}
+  to{transform:rotate(395deg) translateX(53px) scale(.8)}
+}
+@keyframes coreOrbitC{
+  from{transform:rotate(190deg) translateX(34px) scale(.7)}
+  50%{filter:brightness(1.8)}
+  to{transform:rotate(550deg) translateX(34px) scale(.7)}
+}
+
+.visual-stage.running .pulse-a{animation-duration:2.4s}
+.visual-stage.running .pulse-b{animation-duration:3.1s}
+.visual-stage.running .pulse-c{animation-duration:1.9s}
+
+@media(prefers-reduced-motion:reduce){
+  .core-orbit-pulse{animation:none!important;display:none}
+}
+
+/* NEURAL SPHERE CALIBRATION v1 — sphere only */
+.core-live-layer{
+  left:31.25%;
+  top:7.8%;
+  width:16.3%;
+}
+
+/* NEURAL SPHERE CALIBRATION v2 — center correction */
+.core-live-layer{
+  left:42.1%;
+  top:10.8%;
+  width:16.3%;
+}
+
+/* ADIE TOP NAV VISIBILITY v1 */
+.nav-hot a{
+  color:rgba(220,248,255,.78);
+  text-shadow:0 0 7px rgba(0,234,255,.18);
+  font-weight:600;
+}
+
+.nav-hot a:hover,
+.nav-hot a:focus-visible{
+  color:#f2feff;
+  text-shadow:
+    0 0 7px rgba(255,255,255,.35),
+    0 0 14px rgba(0,234,255,.65);
+}
+
+.nav-hot a.is-route-active{
+  color:#63f7ff;
+  text-shadow:
+    0 0 8px rgba(0,234,255,.65),
+    0 0 16px rgba(0,234,255,.28);
+}
+
+.nav-hot a.is-route-active::after{
+  transform:scaleX(1);
+}
+
+/* ADIE TOP NAV HUD BACKPLATE v1 */
+.nav-hot{
+  padding:8px 12px 9px;
+  border-top:1px solid rgba(0,234,255,.10);
+  border-bottom:1px solid rgba(0,234,255,.28);
+  background:
+    linear-gradient(90deg,
+      transparent 0%,
+      rgba(0,10,20,.72) 8%,
+      rgba(0,12,23,.82) 50%,
+      rgba(0,10,20,.72) 92%,
+      transparent 100%);
+  box-shadow:
+    0 8px 20px rgba(0,0,0,.28),
+    0 1px 12px rgba(0,234,255,.07);
+  backdrop-filter:blur(4px);
+}
+
+.nav-hot a{
+  color:#dffaff;
+  font-weight:700;
+  text-shadow:0 1px 3px #001018,0 0 8px rgba(0,234,255,.28);
+}
