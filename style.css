@@ -1417,3 +1417,105 @@ body.adie-demo-open{overflow:hidden}
  }
 }
 
+/* ADIE PRIORITY PROOF STRIP v2 */
+.adie-proof-strip{width:min(1500px,calc(100% - 32px));margin:18px auto 30px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.adie-proof-strip article{min-height:110px;padding:18px 14px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:linear-gradient(145deg,rgba(2,24,42,.92),rgba(1,10,20,.94));border:1px solid rgba(0,240,255,.38);box-shadow:inset 0 0 22px rgba(0,240,255,.05),0 0 22px rgba(0,240,255,.07)}
+.adie-proof-strip strong{font-size:clamp(1.35rem,2.2vw,2.15rem);line-height:1;color:#eaffff;text-shadow:0 0 14px rgba(0,240,255,.35)}
+.adie-proof-strip span{margin-top:10px;font-size:.68rem;letter-spacing:.16em;color:rgba(220,248,255,.68)}
+.adie-proof-strip b{margin-top:7px;font-size:.65rem;letter-spacing:.18em;color:#00ff66}
+@media(max-width:900px){.adie-proof-strip{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.adie-proof-strip{width:min(100% - 20px,1500px);gap:8px}.adie-proof-strip article{min-height:96px;padding:14px 8px}.adie-proof-strip span{font-size:.56rem}}
+
+/* ADIE HERO CYBER TRUST CARD */
+.hero-cyber-card{
+  position:absolute;
+  z-index:8;
+  top:17%;
+  right:2.4%;
+  width:clamp(190px,16vw,260px);
+  padding:14px 16px 13px;
+  display:flex;
+  flex-direction:column;
+  text-decoration:none;
+  background:linear-gradient(145deg,rgba(1,20,34,.88),rgba(0,8,17,.94));
+  border:1px solid rgba(0,240,255,.42);
+  border-left:2px solid rgba(0,255,102,.72);
+  box-shadow:0 0 24px rgba(0,240,255,.10),inset 0 0 22px rgba(0,240,255,.045);
+  backdrop-filter:blur(7px);
+  transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease;
+}
+.hero-cyber-card:hover,
+.hero-cyber-card:focus-visible{
+  outline:none;
+  transform:translateY(-2px);
+  border-color:rgba(0,240,255,.82);
+  box-shadow:0 0 30px rgba(0,240,255,.24),inset 0 0 24px rgba(0,240,255,.07);
+}
+.hero-cyber-eyebrow{
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:.18em;
+  color:#00eaff;
+}
+.hero-cyber-title{
+  margin-top:5px;
+  font-size:10px;
+  letter-spacing:.09em;
+  color:#dffcff;
+}
+.hero-cyber-score{
+  margin-top:10px;
+  font-size:20px;
+  font-weight:900;
+  line-height:1;
+  color:#f1ffff;
+  text-shadow:0 0 12px rgba(0,240,255,.28);
+}
+.hero-cyber-score b{
+  margin-left:5px;
+  font-size:9px;
+  letter-spacing:.12em;
+  color:#00ff66;
+}
+.hero-cyber-integrity{
+  margin-top:8px;
+  font-size:8px;
+  letter-spacing:.08em;
+  color:#a9cbd3;
+}
+.hero-cyber-controls{
+  margin-top:8px;
+  padding-top:7px;
+  border-top:1px solid rgba(0,240,255,.17);
+  font-size:7px;
+  letter-spacing:.11em;
+  color:#7298a3;
+}
+.hero-cyber-link{
+  margin-top:8px;
+  font-size:8px;
+  font-weight:900;
+  letter-spacing:.12em;
+  color:#00eaff;
+}
+@media(max-width:900px){
+  .hero-cyber-card{
+    top:14%;
+    right:1.5%;
+    width:180px;
+    padding:10px 11px;
+  }
+  .hero-cyber-controls{display:none}
+  .hero-cyber-score{font-size:16px}
+}
+@media(max-width:640px){
+  .hero-cyber-card{display:none}
+}
+
+/* HERO CYBER POSITION v2 */
+.hero-cyber-card{top:5.5%;right:2.2%;}
+
+
+/* HERO CYBER POSITION v3 */
+.hero-cyber-card{top:0.8%;right:0.8%;}
+
