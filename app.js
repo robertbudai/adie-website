@@ -853,3 +853,29 @@ const gateTargets = {
  }
  root.querySelectorAll('[data-journey]').forEach(b=>b.addEventListener('click',()=>{lane=b.dataset.journey;index=0;render();}));render();
 })();
+// V12.7 - Six hero modules open the six-step decision story.
+// Original symbols and master artwork are not replaced.
+(() => {
+ const map=[
+  ['.zone-data',0,'Problem'],['.zone-causal',1,'Evidence'],
+  ['.zone-decision',2,'Decision'],['.zone-safety',3,'Uncertainty'],
+  ['.zone-action',4,'Verification'],['.zone-learn',5,'Business Impact']
+ ];
+ function openDecisionStep(index){
+  const root=document.querySelector('#decision-trust-journey');if(!root)return;
+  root.querySelector('[data-journey="decision"]')?.click();
+  const steps=[...root.querySelectorAll('#tjSteps button')];
+  steps[index]?.click();
+  root.scrollIntoView({behavior:'smooth',block:'start'});
+ }
+ map.forEach(([selector,index,label])=>{
+  const button=document.querySelector('.hero-real-controls '+selector);if(!button)return;
+  button.title=label+' - open decision story';
+  const old=button.getAttribute('aria-label')||'ADIE module';
+  button.setAttribute('aria-label',old+'; '+label+' decision story');
+  button.addEventListener('click',event=>{
+   event.preventDefault();event.stopImmediatePropagation();openDecisionStep(index);
+  },true);
+ });
+})();
+

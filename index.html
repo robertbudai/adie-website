@@ -65,6 +65,18 @@
   </section>
 
   <section class="live-grid" id="technology">
+    <!-- ADIE VALIDATION CARD SWAP v1 -->
+    <article class="panel advantages-panel">
+      <div class="panel-title-row"><div class="bolt">ϟ</div><div class="eyebrow">KEY ADVANTAGES</div></div>
+      <div class="adv adv-rich">
+        <div><i class="ico green">⌬</i><p><strong>Causal decision<br>intelligence</strong><small>Beyond correlation</small></p></div>
+        <div><i class="ico cyan">◇</i><p><strong>Safe, auditable<br>and explainable</strong><small>Trust through transparency</small></p></div>
+        <div><i class="ico gold">▥</i><p><strong>Uncertainty-aware<br>& robust decisions</strong><small>Built for real-world complexity</small></p></div>
+        <div><i class="ico violet">◎</i><p><strong>Business value focus</strong><small>Measurable impact</small></p></div>
+      </div>
+      <a class="panel-btn" href="#technology">HOW IT WORKS <span>→</span></a>
+    </article>
+
     <article class="panel validation-panel" id="validation">
       <div class="eyebrow">REAL-WORLD VALIDATION</div>
       <h2>Hillstrom E-Mail Marketing Experiment</h2>
@@ -80,18 +92,7 @@
         <i style="--h:72%"></i><i style="--h:89%"></i><i style="--h:65%"></i><i style="--h:78%"></i>
         <i style="--h:55%"></i><i style="--h:48%"></i><i style="--h:36%"></i><i style="--h:29%"></i>
       </div>
-      <a class="panel-btn" href="#validation">VIEW VALIDATION DETAILS <span>→</span></a>
-    </article>
-
-    <article class="panel advantages-panel">
-      <div class="panel-title-row"><div class="bolt">ϟ</div><div class="eyebrow">KEY ADVANTAGES</div></div>
-      <div class="adv adv-rich">
-        <div><i class="ico green">⌬</i><p><strong>Causal decision<br>intelligence</strong><small>Beyond correlation</small></p></div>
-        <div><i class="ico cyan">◇</i><p><strong>Safe, auditable<br>and explainable</strong><small>Trust through transparency</small></p></div>
-        <div><i class="ico gold">▥</i><p><strong>Uncertainty-aware<br>& robust decisions</strong><small>Built for real-world complexity</small></p></div>
-        <div><i class="ico violet">◎</i><p><strong>Business value focus</strong><small>Measurable impact</small></p></div>
-      </div>
-      <a class="panel-btn" href="#technology">HOW IT WORKS <span>→</span></a>
+      <a class="panel-btn" href="#validation-evidence">VIEW VALIDATION DETAILS <span>→</span></a>
     </article>
 
     <article class="panel security-panel" id="security">
@@ -116,6 +117,29 @@
       </div>
       <a class="panel-btn security-btn" href="#security">LEARN MORE <span>→</span></a>
     </article>
+  </section>
+
+
+
+  <section class="validation-evidence-section" id="validation-evidence" aria-labelledby="validation-evidence-title">
+    <div class="ve-kicker">REAL-WORLD VALIDATION / INSPECTABLE EVIDENCE</div>
+    <h2 id="validation-evidence-title">HILLSTROM VALIDATION EVIDENCE</h2>
+    <p>Inspect the available validation artifacts behind the reported results. The links open JSON files; they are supporting artifacts, not an independent certification. Review the files and any sensitive fields before publishing this website.</p>
+    <details class="ve-disclosure">
+      <summary>OPEN VALIDATION EVIDENCE <span>6 JSON ARTIFACTS &#8595;</span></summary>
+      <div class="ve-content">
+        <p>Available validation outputs:</p>
+        <ul>
+          <li><a href="evidence/h3_causal_effects.json" target="_blank" rel="noopener noreferrer">H3 · Causal effects · JSON &#8599;</a></li>
+          <li><a href="evidence/h4_treatment_discrimination.json" target="_blank" rel="noopener noreferrer">H4 · Treatment discrimination · JSON &#8599;</a></li>
+          <li><a href="evidence/h5_individualized_policy.json" target="_blank" rel="noopener noreferrer">H5 · Individualized policy · JSON &#8599;</a></li>
+          <li><a href="evidence/h6_reserved_generalization.json" target="_blank" rel="noopener noreferrer">H6 · Reserved generalization · JSON &#8599;</a></li>
+          <li><a href="evidence/h7_business_value_roi.json" target="_blank" rel="noopener noreferrer">H7 · Business value / ROI · JSON &#8599;</a></li>
+          <li><a href="evidence/h8_reproducibility_manifest.json" target="_blank" rel="noopener noreferrer">H8 · Reproducibility manifest · JSON &#8599;</a></li>
+        </ul>
+        <p class="ve-caveat">Reported test counts and holdout figures are displayed on the validation card. These artifacts do not by themselves establish independent verification or production readiness.</p>
+      </div>
+    </details>
   </section>
 
   <section class="technology-section" id="how-adie-works">
@@ -387,6 +411,23 @@
       <article><strong>81 / 81</strong><span>T8B–T8J FINAL SECURITY GATE</span><b>PASS</b></article>
       <article><strong>0</strong><span>DETECTED SECURITY REGRESSIONS</span><b>INTERNAL VALIDATION</b></article>
     </div>
+
+    <details class="sc-evidence-summary" id="security-evidence-summary">
+      <summary>VIEW EVIDENCE <span>81 / 81 INTERNAL SECURITY REVALIDATION &#8595;</span></summary>
+      <div class="sc-evidence-content">
+        <div class="sc-evidence-heading"><span>ADIE CYBER / SECURITY VERIFICATION</span><strong>81 / 81 PASS</strong></div>
+        <p>Evidence-backed internal revalidation completed September 16, 2026. The 81 tests were reconstructed and run in separate fresh internal test executions; this does not establish that one historical 81-test run occurred.</p>
+        <div class="sc-evidence-metrics">
+          <div><strong>60 / 60</strong><span>T8B–T8I primary suite</span></div>
+          <div><strong>7 / 7</strong><span>T8J-A standalone</span></div>
+          <div><strong>7 / 7</strong><span>T8H-C standalone</span></div>
+          <div><strong>7 / 7</strong><span>T8I-C standalone</span></div>
+          <div><strong>47 / 47</strong><span>Copied evidence files: SHA-256 match</span></div>
+        </div>
+        <p><strong>Evidence custody:</strong> 47 files in a private consolidated audit package; checksum manifest and audit report retained offline. SHA-256 checks establish consistency of the copies with the recorded manifest, not independent attestation.</p>
+        <p class="sc-evidence-limit"><strong>Scope:</strong> Internal security revalidation only. Not an independent penetration test, production security certification, or proof of production readiness. Raw internal evidence is not published on this page.</p>
+      </div>
+    </details>
 
     <div class="sc-layout">
       <div class="sc-controls">
@@ -741,9 +782,9 @@
       <label>What would a successful outcome look like? <small>Optional</small><textarea name="outcome" maxlength="1000" rows="2" placeholder="Measurable outcome or success criteria."></textarea></label>
       <div class="inquiry-honeypot" aria-hidden="true"><label>Leave this field blank<input name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
       <label class="inquiry-consent"><input type="checkbox" name="consent" value="yes" required><span>I agree that the information I submit may be processed to respond to my inquiry. <em>*</em></span></label>
-      <p class="inquiry-privacy">Do not submit passwords, API keys, personal health information or confidential business data. Before enabling submissions, publish a privacy notice identifying the controller, form provider, retention period and data-subject rights. The form provider processes the submission; ADIE does not expose its private admin API.</p>
+      <p class="inquiry-privacy">Do not submit passwords, API keys, personal health information or confidential business data. See the Privacy Notice for information about the controller, form provider, retention period and data-subject rights. The form provider processes the submission; ADIE does not expose its private admin API.</p>
       <button type="submit" id="inquirySubmit" disabled>SUBMIT ENTERPRISE INQUIRY <span aria-hidden="true">↗</span></button>
-      <p id="inquiryStatus" class="inquiry-status" role="status" aria-live="polite">Submission is disabled until the form service is configured and a privacy notice is published.</p>
+      <p id="inquiryStatus" class="inquiry-status" role="status" aria-live="polite">Enterprise inquiries are submitted securely through the configured form service.</p>
     </form></div>
   </section>
 
