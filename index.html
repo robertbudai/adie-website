@@ -337,7 +337,7 @@
     <div class="sc-status">
       <article><strong>2,631 / 2,631</strong><span>APPLICATION + SECURITY BASELINE</span><b>PASS</b></article>
       <article><strong>1,475 / 1,475</strong><span>FULL SECURITY SUITE</span><b>PASS</b></article>
-      <article><strong>81 / 81</strong><span>T8B–T8J FINAL SECURITY GATE</span><b>PASS</b></article>
+      <article><strong>81 / 81</strong><span>FINAL INTERNAL SECURITY REVALIDATION</span><b>PASS</b></article>
       <article><strong>0</strong><span>DETECTED SECURITY REGRESSIONS</span><b>INTERNAL VALIDATION</b></article>
     </div>
 
@@ -360,14 +360,14 @@
 
     <div class="sc-layout">
       <div class="sc-controls">
-        <button class="sc-control is-active" data-sec="auth"><span>01</span><div><strong>Authentication & Sessions</strong><small>Authenticated access boundary</small></div><b>ACTIVE</b></button>
-        <button class="sc-control" data-sec="rbac"><span>02</span><div><strong>Role-Based Access Control</strong><small>Admin / developer / viewer boundaries</small></div><b>ACTIVE</b></button>
-        <button class="sc-control" data-sec="tenant"><span>03</span><div><strong>Tenant Isolation</strong><small>Multi-tenant separation controls</small></div><b>ACTIVE</b></button>
-        <button class="sc-control" data-sec="api"><span>04</span><div><strong>API & Request Hardening</strong><small>Request identity, origins and headers</small></div><b>ACTIVE</b></button>
-        <button class="sc-control" data-sec="audit"><span>05</span><div><strong>Audit & Observability</strong><small>Traceable request lifecycle</small></div><b>ACTIVE</b></button>
-        <button class="sc-control" data-sec="integrity"><span>06</span><div><strong>Integrity & Tamper Resistance</strong><small>Defensive integrity verification</small></div><b>ACTIVE</b></button>
-        <button class="sc-control" data-sec="abuse"><span>07</span><div><strong>Rate & Abuse Protection</strong><small>Bounded request pressure</small></div><b>ACTIVE</b></button>
-        <button class="sc-control" data-sec="closed"><span>08</span><div><strong>Fail-Closed Security</strong><small>Unsafe ambiguity does not become access</small></div><b>ACTIVE</b></button>
+        <button class="sc-control is-active" data-sec="auth"><span>01</span><div><strong>Authentication & Sessions</strong><small>Authenticated access boundary</small></div><b>IMPLEMENTED</b></button>
+        <button class="sc-control" data-sec="rbac"><span>02</span><div><strong>Role-Based Access Control</strong><small>Admin / developer / viewer boundaries</small></div><b>IMPLEMENTED</b></button>
+        <button class="sc-control" data-sec="tenant"><span>03</span><div><strong>Tenant Isolation</strong><small>Multi-tenant separation controls</small></div><b>IMPLEMENTED</b></button>
+        <button class="sc-control" data-sec="api"><span>04</span><div><strong>API & Request Hardening</strong><small>Request identity, origins and headers</small></div><b>IMPLEMENTED</b></button>
+        <button class="sc-control" data-sec="audit"><span>05</span><div><strong>Audit & Observability</strong><small>Traceable request lifecycle</small></div><b>IMPLEMENTED</b></button>
+        <button class="sc-control" data-sec="integrity"><span>06</span><div><strong>Integrity & Tamper Resistance</strong><small>Defensive integrity verification</small></div><b>IMPLEMENTED</b></button>
+        <button class="sc-control" data-sec="abuse"><span>07</span><div><strong>Rate & Abuse Protection</strong><small>Bounded request pressure</small></div><b>IMPLEMENTED</b></button>
+        <button class="sc-control" data-sec="closed"><span>08</span><div><strong>Fail-Closed Security</strong><small>Unsafe ambiguity does not become access</small></div><b>IMPLEMENTED</b></button>
       </div>
 
       <div class="sc-console" aria-live="polite">
@@ -439,7 +439,7 @@
 
     <div class="sc-footer-note">
       <strong>SECURITY POSITION</strong>
-      <p>ADIE is presented as a security-hardened enterprise prototype with internal automated validation. The current evidence is not a claim that the system is unhackable, independently certified, or production-ready.</p>
+      <p>ADIE is presented as a security-hardened enterprise prototype supported by internal automated validation. This evidence does not constitute an independent penetration test, external security certification, or a claim of production readiness.</p>
     </div>
   </section>
 

@@ -1,4 +1,4 @@
-
+﻿
 :root{--cyan:#00eaff;--green:#00ff66;--bg:#01070d;--line:rgba(0,234,255,.5)}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#01070d;color:#eafcff;font-family:Bahnschrift,"Segoe UI",sans-serif}
 .visual-stage{position:relative;width:100%;aspect-ratio:3/2;max-height:100vh;min-height:650px;overflow:hidden;background:#01070d}
@@ -931,6 +931,33 @@ repeating-linear-gradient(0deg,rgba(0,240,255,.05) 0 1px,transparent 1px 15px)}
     radial-gradient(circle at 88% 15%,rgba(0,255,102,.055),transparent 25%),
     linear-gradient(145deg,rgba(0,31,45,.65),rgba(0,11,20,.82))
 }
+.vc-evidence{
+  transition:border-color .22s ease,box-shadow .22s ease,transform .22s ease;
+}
+.vc-evidence.is-updated{
+  animation:vcEvidenceUpdated .46s ease-out;
+}
+@keyframes vcEvidenceUpdated{
+  0%{
+    border-color:rgba(0,238,255,.72);
+    box-shadow:0 0 0 1px rgba(0,238,255,.16),0 0 26px rgba(0,238,255,.14);
+    transform:translateY(-1px);
+  }
+  55%{
+    border-color:rgba(0,255,102,.48);
+    box-shadow:0 0 20px rgba(0,255,102,.08);
+  }
+  100%{
+    border-color:rgba(0,238,255,.22);
+    box-shadow:none;
+    transform:translateY(0);
+  }
+}
+@media (prefers-reduced-motion:reduce){
+  .vc-evidence{transition:none}
+  .vc-evidence.is-updated{animation:none}
+}
+
 .vc-evidence-top{display:flex;justify-content:space-between;gap:20px}
 .vc-evidence-top span{color:#00f0ff;font-size:9px;font-weight:900;letter-spacing:.15em}
 .vc-evidence-top b{color:#7599a5;font-size:7px;letter-spacing:.12em}

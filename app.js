@@ -1,4 +1,4 @@
-
+﻿
 // Public RUN demo: frozen historical Hillstrom point estimate, not a live ADIE engine.
 const overlay = document.getElementById('runOverlay');
 const state = document.getElementById('runState');
@@ -469,6 +469,7 @@ document.querySelectorAll('.panel-btn').forEach(a=>{
 
   function activate(btn){
     const key=btn.dataset.gate,d=data[key]; if(!d) return;
+    const evidencePanel=document.querySelector('#validation-center .vc-evidence');
     gates.forEach(g=>g.classList.toggle('is-active',g===btn));
     el('vcGateId').textContent=key.toUpperCase()+' / PASS';
     el('vcTitle').textContent=d.title;
@@ -485,6 +486,11 @@ document.querySelectorAll('.panel-btn').forEach(a=>{
       link.href='evidence/'+artifact;
       link.textContent=key==='h8'?'OPEN H8 MANIFEST [LINK]':'OPEN '+key.toUpperCase()+' JSON EVIDENCE [LINK]';
       note.textContent=key==='h8'?'Freeze record and disclosure below.':'Original artifact, checksum recorded in H8 manifest.';
+    }
+    if(evidencePanel){
+      evidencePanel.classList.remove('is-updated');
+      void evidencePanel.offsetWidth;
+      evidencePanel.classList.add('is-updated');
     }
   }
   gates.forEach(g=>g.addEventListener('click',()=>activate(g)));
