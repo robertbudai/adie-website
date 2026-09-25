@@ -80,14 +80,31 @@
     <div class="rwv-selector">
       <div class="rwv-heading">
         <span>REAL-WORLD VALIDATIONS</span>
-        <h2>TWO DOMAINS. TWO DIFFERENT DECISION PROBLEMS.</h2>
-        <p>ADIE has been evaluated on separate real-world datasets covering causal business decisions and temporal constrained allocation.</p>
+        <h2>ONE DECISION ENGINE. THREE DIFFERENT VALIDATION PROBLEMS.</h2>
+        <p>Criteo is the primary large-scale randomized uplift validation, complemented by causal business evidence from Hillstrom and temporal constrained-allocation evidence from NYC Taxi data.</p>
       </div>
 
-      <div class="rwv-grid">
+      <div class="rwv-grid rwv-grid-featured">
+
+        <a class="rwv-card rwv-criteo rwv-featured" href="#criteo-validation">
+          <div class="rwv-number">01</div>
+          <div class="rwv-type">RANDOMIZED / UPLIFT DECISION POLICY</div>
+          <h3>Criteo Uplift Experiment</h3>
+          <p>A frozen uplift decision policy evaluated across 13.98 million randomized-experiment user records, with separate validation and final-holdout stages.</p>
+
+          <div class="rwv-featured-stats">
+            <div><strong>13.98M</strong><span>USER RECORDS</span></div>
+            <div><strong>2.80M</strong><span>FINAL HOLDOUT</span></div>
+            <div><strong>+0.724 pp</strong><span>POLICY ADVANTAGE</span></div>
+            <div><strong>5 / 5</strong><span>POSITIVE STABILITY SHARDS</span></div>
+            <div><strong>8 / 8</strong><span>FINAL GATES PASSED</span></div>
+          </div>
+
+          <b>VIEW CRITEO EVIDENCE &#8594;</b>
+        </a>
 
         <a class="rwv-card" href="#hillstrom-validation">
-          <div class="rwv-number">01</div>
+          <div class="rwv-number">02</div>
           <div class="rwv-type">BUSINESS / CAUSAL</div>
           <h3>Hillstrom Randomized Retail Experiment</h3>
           <p>Randomized treatment effects, decision safety, reserved holdout verification and bounded business-value evidence.</p>
@@ -95,11 +112,11 @@
             <strong>64,000</strong><span>records</span>
             <strong>8 / 8</strong><span>gates passed</span>
           </div>
-          <b>VIEW HILLSTROM EVIDENCE →</b>
+          <b>VIEW HILLSTROM EVIDENCE &#8594;</b>
         </a>
 
         <a class="rwv-card rwv-nyc" href="#nyc-taxi-validation">
-          <div class="rwv-number">02</div>
+          <div class="rwv-number">03</div>
           <div class="rwv-type">TEMPORAL / CONSTRAINED ALLOCATION</div>
           <h3>NYC Taxi Fleet-Allocation Experiment</h3>
           <p>Time-dependent demand, uncertainty-aware abstention, constrained allocation and final unseen holdout verification.</p>
@@ -108,7 +125,7 @@
             <strong>~23.1%</strong><span>relative error reduction</span>
             <strong>8 / 8</strong><span>gates passed</span>
           </div>
-          <b>VIEW NYC TAXI EVIDENCE →</b>
+          <b>VIEW NYC TAXI EVIDENCE &#8594;</b>
         </a>
 
       </div>
@@ -118,8 +135,177 @@
       </p>
     </div>
 
+<section class="criteo-validation" id="criteo-validation">
+
+  <div class="criteo-kicker">REAL-WORLD VALIDATION 01 / CRITEO UPLIFT</div>
+
+  <div class="criteo-head">
+    <div>
+      <h2>FROM PREDICTION TO TARGETED ACTION.</h2>
+      <p>ADIE was evaluated on the Criteo Uplift Prediction Dataset v2.1, a randomized advertising experiment containing 13,979,592 user records. Development, validation and final holdout stages were separated before final evaluation.</p>
+    </div>
+    <div class="criteo-seal">
+      <strong>8 / 8</strong>
+      <span>FINAL GATES<br>PASSED</span>
+    </div>
+  </div>
+
+  <div class="criteo-metrics">
+    <article>
+      <strong>13.98M</strong>
+      <span>USER RECORDS</span>
+      <b>FULL DATASET</b>
+    </article>
+    <article>
+      <strong>2.80M</strong>
+      <span>FINAL HOLDOUT</span>
+      <b>UNSEEN FOR MODEL / POLICY SELECTION</b>
+    </article>
+    <article>
+      <strong>+0.724 pp</strong>
+      <span>POLICY ADVANTAGE</span>
+      <b>VS MATCHED-RATE RANDOM</b>
+    </article>
+    <article>
+      <strong>5 / 5</strong>
+      <span>STABILITY SHARDS POSITIVE</span>
+      <b>FINAL HOLDOUT</b>
+    </article>
+  </div>
+
+  <div class="criteo-comparison">
+    <div class="criteo-section-title">
+      <span>FINAL HOLDOUT / FROZEN POLICY</span>
+      <h3>ADIE concentrated treatment where the measured effect was substantially higher.</h3>
+    </div>
+
+    <div class="criteo-compare-grid">
+      <article>
+        <span>OVERALL TREATMENT EFFECT</span>
+        <strong>1.02 pp</strong>
+      </article>
+      <article class="criteo-highlight">
+        <span>ADIE TOP 10% TREATMENT EFFECT</span>
+        <strong>5.55 pp</strong>
+      </article>
+      <article>
+        <span>BOTTOM 10% TREATMENT EFFECT</span>
+        <strong>0.93 pp</strong>
+      </article>
+      <article class="criteo-highlight">
+        <span>TOP 10% / OVERALL</span>
+        <strong>~5.4x</strong>
+      </article>
+    </div>
+  </div>
+
+  <div class="criteo-policy">
+    <div>
+      <span>PRIMARY POLICY RESULT</span>
+      <h3>Positive estimated policy advantage on the final holdout.</h3>
+      <p>The frozen Top-10% uplift policy exceeded the matched-rate random comparator by 0.724 percentage points in estimated policy value.</p>
+    </div>
+
+    <div class="criteo-policy-stats">
+      <article>
+        <strong>+0.724 pp</strong>
+        <span>ESTIMATED ADVANTAGE</span>
+      </article>
+      <article>
+        <strong>+0.681</strong>
+        <span>95% CI LOW / pp</span>
+      </article>
+      <article>
+        <strong>+0.767</strong>
+        <span>95% CI HIGH / pp</span>
+      </article>
+    </div>
+  </div>
+
+  <div class="criteo-protocol">
+    <span>EXPERIMENT STRUCTURE</span>
+
+    <div class="criteo-timeline">
+      <article>
+        <b>8,387,262</b>
+        <strong>DEVELOPMENT</strong>
+        <small>Model and policy development</small>
+      </article>
+
+      <i>&#8594;</i>
+
+      <article>
+        <b>2,796,665</b>
+        <strong>VALIDATION</strong>
+        <small>8 / 8 gates passed</small>
+      </article>
+
+      <i>&#8594;</i>
+
+      <article>
+        <b>2,795,665</b>
+        <strong>FINAL HOLDOUT</strong>
+        <small>8 / 8 gates passed under the frozen final protocol</small>
+      </article>
+    </div>
+  </div>
+
+  <div class="criteo-integrity">
+    <div>
+      <span>EVIDENCE INTEGRITY</span>
+      <h3>Closed, hash-verifiable final evidence snapshot.</h3>
+      <p>The final experiment was closed with execution logs, machine-environment evidence, artifact hashes and a verified evidence-freeze manifest.</p>
+    </div>
+
+    <div class="criteo-hashes">
+      <p>
+        <small>FINAL CLOSEOUT SHA-256</small>
+        <code>B7B9A2180822CE72D8D121B79A3156192DE1F288818CE7CC3E5C4AAD6CD32FC4</code>
+      </p>
+
+      <p>
+        <small>FINAL FREEZE MANIFEST SHA-256</small>
+        <code>F452EFB05321279BC08597F3FB9EFCD51C42A827994269FBD0C33EB307558E0E</code>
+      </p>
+    </div>
+  </div>
+
+  <div class="criteo-boundary">
+    <div>
+      <span>RESPONSIBLE CLAIM BOUNDARY</span>
+      <h3>What this experiment establishes - and what it does not.</h3>
+    </div>
+
+    <div class="criteo-boundary-grid">
+      <article>
+        <b>SUPPORTED BY THIS EVIDENCE</b>
+        <p>Positive estimated final-holdout policy advantage over the matched-rate random comparator</p>
+        <p>Higher measured treatment effect in ADIE's frozen Top-10% policy group than in the overall population</p>
+        <p>5 / 5 positive final stability shards</p>
+        <p>8 / 8 validation gates and 8 / 8 final gates passed</p>
+        <p>Hash-verifiable closed evidence freeze</p>
+      </article>
+
+      <article class="criteo-not-established">
+        <b>NOT ESTABLISHED BY THIS EVIDENCE</b>
+        <p>Realized profit or financial return</p>
+        <p>Universal uplift or targeting performance</p>
+        <p>Performance on unrelated populations or interventions</p>
+        <p>Production scalability or production readiness</p>
+        <p>Independent certification</p>
+      </article>
+    </div>
+  </div>
+
+  <div class="criteo-source">
+    <strong>SOURCE &amp; ATTRIBUTION</strong>
+    <p>Source data: Criteo Uplift Prediction Dataset v2.1. This is an independent ADIE validation experiment and is not produced, sponsored or endorsed by Criteo. No raw dataset is redistributed here.</p>
+  </div>
+
+</section>
+
     <div id="hillstrom-validation"></div>
-    <div class="vc-kicker">VALIDATION CENTER / HILLSTROM RANDOMIZED RETAIL EXPERIMENT</div>
+    <div class="vc-kicker">REAL-WORLD VALIDATION 02 / HILLSTROM RANDOMIZED RETAIL EXPERIMENT</div>
 
     <div class="vc-head">
       <div>
@@ -249,7 +435,7 @@
 
 <section class="nyc-validation" id="nyc-taxi-validation">
 
-  <div class="nyc-kicker">REAL-WORLD VALIDATION 02 / NYC TAXI</div>
+  <div class="nyc-kicker">REAL-WORLD VALIDATION 03 / NYC TAXI</div>
 
   <div class="nyc-head">
     <div>
@@ -387,6 +573,7 @@
   </div>
 
 </section>
+
 
 <section class="validation-evidence-section" id="validation-evidence" aria-labelledby="validation-evidence-title">
     <div class="ve-kicker">REAL-WORLD VALIDATION / INSPECTABLE EVIDENCE</div>
