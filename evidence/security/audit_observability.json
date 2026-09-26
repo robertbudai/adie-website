@@ -1,0 +1,19 @@
+{
+  "artifact_type": "ADIE public sanitized security verification evidence",
+  "control_id": "05",
+  "control": "Audit & Observability",
+  "status": "VERIFIED",
+  "checkpoint_date": "2026-09-26",
+  "verification": {
+    "mapped_validated_test_cases": 52,
+    "failures_or_errors": 0
+  },
+  "scope": [
+    "Security-event contracts",
+    "Audit-store behavior",
+    "Restart/integrity behavior",
+    "Security-event persistence and correlation"
+  ],
+  "disclosure": "Sanitized public extract. Raw logs, event payloads, internal paths and security configuration are withheld.",
+  "assurance_boundary": "Evidence supports the mapped audit/observability cases; it does not claim universal tamper-proof logging."
+}
