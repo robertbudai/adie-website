@@ -909,6 +909,9 @@
         </div>
         <p><strong>Evidence custody:</strong> 47 files in a private consolidated audit package; checksum manifest and audit report retained offline. SHA-256 checks establish consistency of the copies with the recorded manifest, not independent attestation.</p>
         <p class="sc-evidence-limit"><strong>Scope:</strong> Internal security revalidation only. Not an independent penetration test, production security certification, or proof of production readiness. Raw internal evidence is not published on this page.</p>
+        <p><strong>Fresh assurance extension — September 26, 2026:</strong> preserved execution evidence establishes the 1,475 / 1,475 security-suite result with 0 failures, errors or skips. Mapped evidence includes 44 tenant-isolation test cases and 94 tamper / evidence-integrity test cases with 0 failures / errors. Fresh scoped SCA reported no known vulnerabilities in the explicitly recorded audited dependency baseline; psycopg remained outside that scan scope because its applicable version was not established.</p>
+        <p><strong>Fresh internal DAST:</strong> authentication boundary 5 / 5 PASS; protected GET endpoint surface 16 / 16 PASS with 0 unauthorized successful responses; authentication rate limiting dynamically rejected request 21 with HTTP 429 after 20 requests in a 60-second window. A public-health metadata exposure was identified, remediated and revalidated 3 / 3 in an isolated DAST runtime. That remediation is not claimed here as already applied to the canonical maintained ADIE source.</p>
+        <p class="sc-evidence-limit"><strong>Open assurance areas:</strong> historical 81/81 provenance remains unverified; the historical 1,475 run is not bound to a preserved Git commit; OWASP ZAP, dedicated fuzzing, full adversarial DoS/resource-exhaustion testing and independent external penetration testing/audit are not established.</p>
       </div>
     </details>
 
@@ -916,11 +919,11 @@
       <div class="sc-controls">
         <button class="sc-control is-active" data-sec="auth"><span>01</span><div><strong>Authentication & Sessions</strong><small>Authenticated access boundary</small></div><b>IMPLEMENTED</b></button>
         <button class="sc-control" data-sec="rbac"><span>02</span><div><strong>Role-Based Access Control</strong><small>Admin / developer / viewer boundaries</small></div><b>IMPLEMENTED</b></button>
-        <button class="sc-control" data-sec="tenant"><span>03</span><div><strong>Tenant Isolation</strong><small>Multi-tenant separation controls</small></div><b>IMPLEMENTED</b></button>
+        <button class="sc-control" data-sec="tenant"><span>03</span><div><strong>Tenant Isolation</strong><small>44 mapped validated test cases</small></div><b>VERIFIED</b></button>
         <button class="sc-control" data-sec="api"><span>04</span><div><strong>API & Request Hardening</strong><small>Request identity, origins and headers</small></div><b>IMPLEMENTED</b></button>
         <button class="sc-control" data-sec="audit"><span>05</span><div><strong>Audit & Observability</strong><small>Traceable request lifecycle</small></div><b>IMPLEMENTED</b></button>
-        <button class="sc-control" data-sec="integrity"><span>06</span><div><strong>Integrity & Tamper Resistance</strong><small>Defensive integrity verification</small></div><b>IMPLEMENTED</b></button>
-        <button class="sc-control" data-sec="abuse"><span>07</span><div><strong>Rate & Abuse Protection</strong><small>Bounded request pressure</small></div><b>IMPLEMENTED</b></button>
+        <button class="sc-control" data-sec="integrity"><span>06</span><div><strong>Integrity & Tamper Resistance</strong><small>94 mapped validated test cases</small></div><b>VERIFIED</b></button>
+        <button class="sc-control" data-sec="abuse"><span>07</span><div><strong>Rate & Abuse Protection</strong><small>Auth limit dynamically exercised</small></div><b>VERIFIED</b></button>
         <button class="sc-control" data-sec="closed"><span>08</span><div><strong>Fail-Closed Security</strong><small>Unsafe ambiguity does not become access</small></div><b>IMPLEMENTED</b></button>
       </div>
 
@@ -957,7 +960,7 @@
       </article>
       <article class="sc-proof">
         <span>REQUEST HARDENING</span><h3>Requests carry security context.</h3>
-        <p>ADIE includes request-ID validation, configured origin controls, security headers and bounded request rates around authenticated API operations.</p>
+        <p>ADIE includes request-ID validation, configured origin controls, security headers and bounded request rates around authenticated API operations. Fresh internal DAST verified 16 / 16 protected GET checks and a 5 / 5 authentication boundary set; the authentication limiter rejected request 21 with HTTP 429 after 20 requests in a 60-second window.</p>
         <div class="sc-tags"><b>REQUEST ID</b><b>CORS</b><b>HEADERS</b><b>RATE LIMIT</b></div>
       </article>
       <article class="sc-proof">
@@ -974,18 +977,26 @@
           <b>SUPPORTED</b>
           <p>Security-hardened enterprise prototype</p>
           <p>Internally validated automated security controls</p>
-          <p>1,475 / 1,475 full security-suite tests passed</p>
+          <p>1,475 / 1,475 full security-suite tests passed — preserved pytest stdout + JUnit, 0 failures / errors / skips</p>
           <p>2,631 / 2,631 application + security baseline passed</p>
           <p>87 / 87 T8B–T8J final internal security revalidation checks passed</p>
+          <p>Tenant isolation: 44 mapped validated test cases, 0 failures / errors</p>
+          <p>Tamper / evidence integrity: 94 mapped validated test cases, 0 failures / errors (limited scope)</p>
+          <p>Fresh SCA: pip-audit found no known vulnerabilities in the explicitly recorded audited dependency baseline</p>
+          <p>Fresh internal DAST: authentication boundary 5 / 5 PASS; protected GET surface 16 / 16 PASS</p>
+          <p>Auth rate limit dynamically verified: request 21 rejected with HTTP 429 after 20 requests / 60 seconds</p>
+          <p>Public-health metadata exposure remediation revalidated 3 / 3 in the isolated DAST runtime only</p>
           <p>Zero detected security regressions at the recorded checkpoint</p>
         </article>
         <article class="pending">
           <b>SEPARATE ASSURANCE STILL REQUIRED</b>
           <p>Independent external penetration testing</p>
           <p>Production deployment hardening</p>
-          <p>Dependency and SBOM review</p>
-          <p>Production load and failure testing</p>
+          <p>Complete dependency / SBOM assurance beyond the scoped fresh SCA baseline (including psycopg)</p>
+          <p>Production load, adversarial DoS and resource-exhaustion testing</p>
           <p>Production key-management infrastructure</p>
+          <p>Dedicated fuzzing and OWASP ZAP execution</p>
+          <p>Historical 1,475-run source-to-Git-commit binding</p>
           <p>Independent audit / certification where required</p>
         </article>
       </div>
@@ -993,7 +1004,7 @@
 
     <div class="sc-footer-note">
       <strong>SECURITY POSITION</strong>
-      <p>ADIE is presented as a security-hardened enterprise prototype supported by internal automated validation. This evidence does not constitute an independent penetration test, external security certification, or a claim of production readiness.</p>
+      <p>ADIE is presented as a security-hardened enterprise prototype supported by internal automated validation and fresh scoped assurance work completed September 26, 2026. Fresh evidence includes scoped SCA and internal dynamic API security checks. The public-health remediation described above is verified in an isolated DAST runtime and is not presented as already applied to the canonical maintained source. This evidence does not constitute an independent penetration test, external security certification, or a claim of production readiness.</p>
     </div>
   </section>
 
