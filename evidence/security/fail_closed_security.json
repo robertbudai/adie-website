@@ -1,0 +1,26 @@
+{
+  "artifact_type": "ADIE public sanitized security verification evidence",
+  "control_id": "08",
+  "control": "Fail-Closed Security",
+  "status": "VERIFIED",
+  "checkpoint_date": "2026-09-26",
+  "verification": {
+    "protected_get_surface": {
+      "passed": 16,
+      "total": 16
+    },
+    "unauthorized_successes": 0,
+    "auth_boundary": {
+      "passed": 5,
+      "total": 5
+    },
+    "result": "Tested missing/invalid access and selected security failure paths were rejected"
+  },
+  "scope": [
+    "Missing/invalid authentication rejection",
+    "Selected tenant/evidence failure paths",
+    "Unauthorized protected-access rejection"
+  ],
+  "disclosure": "Sanitized public extract. Internal failure mechanics and raw attack artifacts are withheld.",
+  "assurance_boundary": "Verification applies to tested failure paths; it is not a universal claim about every possible failure mode."
+}
