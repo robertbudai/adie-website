@@ -1,0 +1,20 @@
+{
+  "artifact_type": "ADIE public sanitized security verification evidence",
+  "control_id": "02",
+  "control": "Role-Based Access Control",
+  "status": "VERIFIED",
+  "checkpoint_date": "2026-09-26",
+  "verification": {
+    "result": "Validated within the preserved internal security suite",
+    "suite_result": "1475 / 1475 PASS",
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "scope": [
+    "Role authorization boundaries",
+    "Authority enforcement"
+  ],
+  "disclosure": "Sanitized public extract. Role mappings, internal authorization implementation and raw security artifacts are withheld.",
+  "assurance_boundary": "Internal prototype validation; not a claim that every authorization path has been externally assessed."
+}
