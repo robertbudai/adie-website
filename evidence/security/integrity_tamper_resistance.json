@@ -1,0 +1,20 @@
+{
+  "artifact_type": "ADIE public sanitized security verification evidence",
+  "control_id": "06",
+  "control": "Integrity & Tamper Resistance",
+  "status": "VERIFIED",
+  "checkpoint_date": "2026-09-26",
+  "verification": {
+    "mapped_validated_test_cases": 94,
+    "failures_or_errors": 0
+  },
+  "scope": [
+    "Manipulation rejection",
+    "Replay rejection",
+    "Signature/integrity checks",
+    "Persistence integrity",
+    "Evidence-integrity attack paths"
+  ],
+  "disclosure": "Sanitized public extract. Cryptographic material, internal signing details and raw attack artifacts are withheld.",
+  "assurance_boundary": "Limited tested scope; no claim of universal tamper-proof security."
+}
