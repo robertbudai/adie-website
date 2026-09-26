@@ -1,0 +1,24 @@
+{
+  "artifact_type": "ADIE public sanitized security verification evidence",
+  "control_id": "01",
+  "control": "Authentication & Sessions",
+  "status": "VERIFIED",
+  "checkpoint_date": "2026-09-26",
+  "verification": {
+    "fresh_auth_boundary": {
+      "passed": 5,
+      "total": 5
+    },
+    "protected_get_surface": {
+      "passed": 16,
+      "total": 16
+    },
+    "unauthorized_successes": 0
+  },
+  "scope": [
+    "Missing or invalid session rejection",
+    "Protected API authentication boundary"
+  ],
+  "disclosure": "Sanitized public extract. Internal test implementation, credentials, configuration and raw security artifacts are withheld.",
+  "assurance_boundary": "Internal prototype validation; not an external penetration-test certification."
+}
