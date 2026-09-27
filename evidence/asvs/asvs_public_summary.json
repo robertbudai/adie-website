@@ -1,0 +1,27 @@
+{
+  "artifact": "ADIE_ASVS_PUBLIC_EVIDENCE_SUMMARY",
+  "standard": "OWASP ASVS 5.0.0",
+  "validation_date": "2026-09-27",
+  "requirements": {
+    "total": 181,
+    "level_1": 40,
+    "level_2": 141
+  },
+  "current_regression": {
+    "tests_passed": 1473,
+    "failures": 0,
+    "warnings": 2,
+    "scope": "current tests/ suite only"
+  },
+  "sealed_requirement_specific_evidence": [
+    "V1.1.1",
+    "V1.1.2",
+    "V1.3.3",
+    "V1.3.6"
+  ],
+  "production_api_modified": false,
+  "security_controls_relaxed": false,
+  "original_mvr_modified": false,
+  "final_snapshot_sha256": "f4da56b067f4a74cda7da83670701849fd7b54a188985271d83c4d340ba62ad1",
+  "claim_boundary": "The regression result does not by itself establish PASS for every individual ASVS requirement."
+}
