@@ -1,0 +1,35 @@
+{
+  "artifact": "ADIE_ASVS_TARGETED_REQUIREMENT_CLOSURE",
+  "date": "2026-09-27",
+  "records": [
+    {
+      "requirement_id": "V1.1.1",
+      "level": "L2",
+      "verdict": "PASS",
+      "evidence_state": "REQUIREMENT_SPECIFIC_EVIDENCE",
+      "status": "SEALED"
+    },
+    {
+      "requirement_id": "V1.1.2",
+      "level": "L2",
+      "verdict": "PASS",
+      "evidence_state": "REQUIREMENT_SPECIFIC_EVIDENCE",
+      "status": "SEALED"
+    },
+    {
+      "requirement_id": "V1.3.3",
+      "level": "L2",
+      "verdict": "PASS",
+      "evidence_state": "REQUIREMENT_SPECIFIC_EVIDENCE",
+      "status": "SEALED"
+    },
+    {
+      "requirement_id": "V1.3.6",
+      "level": "L2",
+      "verdict": "PASS",
+      "evidence_state": "REQUIREMENT_SPECIFIC_EVIDENCE",
+      "status": "SEALED"
+    }
+  ],
+  "note": "These four records represent the requirement-specific evidence explicitly sealed during the targeted closure. The historical MVR record was not rewritten."
+}

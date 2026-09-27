@@ -1,0 +1,15 @@
+ADIE ASVS 5.0.0 — CURRENT FULL REGRESSION
+
+Date: 2026-09-27
+Scope: current tests/ suite only
+Import mode: importlib
+
+RESULT
+1473 passed
+0 failed
+2 warnings
+
+PRODUCTION API: UNCHANGED
+SECURITY RELAXED: NO
+
+This record reports the automated regression result. It does not constitute independent external certification, penetration testing, or a claim that all 181 individual ASVS requirements passed.
