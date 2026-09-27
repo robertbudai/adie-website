@@ -1,0 +1,31 @@
+{
+  "artifact_type": "ADIE public sanitized security verification evidence",
+  "control_id": "04",
+  "control": "API & Request Hardening",
+  "status": "VERIFIED",
+  "checkpoint_date": "2026-09-26",
+  "verification": {
+    "protected_get_surface": {
+      "passed": 16,
+      "total": 16
+    },
+    "auth_boundary": {
+      "passed": 5,
+      "total": 5
+    },
+    "unauthorized_successes": 0,
+    "cors_untrusted_origin": "No Access-Control-Allow-Origin observed in tested probe",
+    "security_headers_observed": [
+      "X-Content-Type-Options: nosniff",
+      "X-Frame-Options: DENY",
+      "Referrer-Policy: no-referrer"
+    ]
+  },
+  "scope": [
+    "Protected API rejection behavior",
+    "Authentication boundary",
+    "Selected origin and response-header controls"
+  ],
+  "disclosure": "Sanitized public extract. Raw HTTP responses, endpoint internals and security configuration are withheld.",
+  "assurance_boundary": "Fresh scoped internal DAST; OWASP ZAP was not used."
+}

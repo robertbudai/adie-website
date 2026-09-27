@@ -1,0 +1,19 @@
+{
+  "artifact_type": "ADIE public sanitized security verification evidence",
+  "control_id": "03",
+  "control": "Tenant Isolation",
+  "status": "VERIFIED",
+  "checkpoint_date": "2026-09-26",
+  "verification": {
+    "mapped_validated_test_cases": 44,
+    "failures_or_errors": 0
+  },
+  "scope": [
+    "Cross-tenant reuse rejection",
+    "Tenant-bound execution",
+    "Concurrent conflicting operations",
+    "Fail-closed tenant binding"
+  ],
+  "disclosure": "Sanitized public extract. Internal tenant identifiers, implementation details and raw attack artifacts are withheld.",
+  "assurance_boundary": "Evidence applies to the mapped validated test cases."
+}

@@ -1,0 +1,20 @@
+{
+  "artifact_type": "ADIE public sanitized security verification evidence",
+  "control_id": "07",
+  "control": "Rate & Abuse Protection",
+  "status": "VERIFIED",
+  "checkpoint_date": "2026-09-26",
+  "verification": {
+    "auth_rate_limit": {
+      "window_seconds": 60,
+      "accepted_test_requests_before_limit": 20,
+      "next_request": 21,
+      "next_request_http_status": 429
+    }
+  },
+  "scope": [
+    "Authentication endpoint rate limiting"
+  ],
+  "disclosure": "Sanitized public extract. Internal limiter implementation and configuration details beyond the verified public result are withheld.",
+  "assurance_boundary": "This verifies the tested authentication rate-limit control, not full DoS resistance."
+}

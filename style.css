@@ -2495,3 +2495,1030 @@ body.adie-demo-open{overflow:hidden}
     grid-template-columns: 1fr;
   }
 }
+
+/* =========================================================
+   ADIE EXECUTIVE BRIDGE
+   Hero -> Meaning -> Validation
+   ========================================================= */
+
+.adie-purpose {
+  position: relative;
+  overflow: hidden;
+  padding: 110px 28px 96px;
+  background:
+    radial-gradient(circle at 18% 20%, rgba(0, 229, 255, 0.08), transparent 32%),
+    radial-gradient(circle at 82% 75%, rgba(126, 87, 255, 0.08), transparent 34%),
+    linear-gradient(180deg, #05080d 0%, #080d14 52%, #05080d 100%);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.adie-purpose::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.22;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: linear-gradient(to bottom, transparent, black 20%, black 80%, transparent);
+}
+
+.adie-purpose-inner {
+  position: relative;
+  z-index: 1;
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
+
+.adie-purpose-kicker {
+  margin-bottom: 18px;
+  color: #61e8ff;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.24em;
+}
+
+.adie-purpose h2 {
+  max-width: 1000px;
+  margin: 0;
+  color: #f7fbff;
+  font-size: clamp(38px, 5.2vw, 72px);
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+  font-weight: 800;
+}
+
+.adie-purpose h2 span {
+  display: block;
+  margin-top: 8px;
+  color: rgba(255,255,255,0.48);
+}
+
+.adie-purpose-lead {
+  max-width: 800px;
+  margin: 32px 0 0;
+  color: rgba(230,240,250,0.72);
+  font-size: clamp(16px, 1.55vw, 20px);
+  line-height: 1.7;
+}
+
+/* Evidence -> Decision -> Verification */
+
+.adie-purpose-flow {
+  display: grid;
+  grid-template-columns: 1fr 110px 1fr 110px 1fr;
+  align-items: center;
+  margin-top: 78px;
+}
+
+.adie-purpose-step {
+  min-width: 0;
+}
+
+.adie-purpose-number {
+  display: block;
+  margin-bottom: 14px;
+  color: rgba(97,232,255,0.55);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+}
+
+.adie-purpose-step h3 {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(22px, 2.3vw, 31px);
+  letter-spacing: 0.05em;
+}
+
+.adie-purpose-step p {
+  max-width: 270px;
+  margin: 12px 0 0;
+  color: rgba(220,232,242,0.55);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.adie-purpose-connector {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.adie-purpose-connector span {
+  display: block;
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(97,232,255,0.08),
+    rgba(97,232,255,0.65)
+  );
+}
+
+.adie-purpose-connector b {
+  margin-left: 8px;
+  color: #61e8ff;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+/* Current development position */
+
+.adie-purpose-stage {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 72px;
+  padding: 20px 0;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.42);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+}
+
+.adie-purpose-stage b {
+  color: rgba(97,232,255,0.45);
+  font-size: 16px;
+}
+
+.adie-purpose-stage strong {
+  color: #61e8ff;
+  font-weight: 800;
+}
+
+/* Seeking + actions */
+
+.adie-purpose-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 50px;
+  margin-top: 42px;
+}
+
+.adie-purpose-seeking {
+  max-width: 650px;
+}
+
+.adie-purpose-seeking small {
+  color: rgba(255,255,255,0.36);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+}
+
+.adie-purpose-seeking p {
+  margin: 10px 0 0;
+  color: rgba(240,247,252,0.74);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.adie-purpose-actions {
+  display: flex;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.adie-purpose-actions a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 18px;
+  border: 1px solid rgba(97,232,255,0.25);
+  color: #bff7ff;
+  background: rgba(97,232,255,0.035);
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  transition:
+    border-color 180ms ease,
+    background 180ms ease,
+    transform 180ms ease;
+}
+
+.adie-purpose-actions a:hover {
+  border-color: rgba(97,232,255,0.7);
+  background: rgba(97,232,255,0.08);
+  transform: translateY(-2px);
+}
+
+/* Mobile */
+
+@media (max-width: 850px) {
+  .adie-purpose {
+    padding: 76px 20px 68px;
+  }
+
+  .adie-purpose-flow {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 55px;
+  }
+
+  .adie-purpose-connector {
+    width: 1px;
+    height: 35px;
+    margin-left: 10px;
+    flex-direction: column;
+  }
+
+  .adie-purpose-connector span {
+    width: 1px;
+    height: 100%;
+    flex: none;
+    background: linear-gradient(
+      180deg,
+      rgba(97,232,255,0.1),
+      rgba(97,232,255,0.6)
+    );
+  }
+
+  .adie-purpose-connector b {
+    margin: 2px 0 0;
+    transform: rotate(90deg);
+  }
+
+  .adie-purpose-step p {
+    max-width: 520px;
+  }
+
+  .adie-purpose-stage {
+    flex-wrap: wrap;
+    gap: 10px 14px;
+    margin-top: 55px;
+  }
+
+  .adie-purpose-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .adie-purpose-actions {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 520px) {
+  .adie-purpose h2 {
+    font-size: 36px;
+  }
+
+  .adie-purpose-actions {
+    width: 100%;
+  }
+
+  .adie-purpose-actions a {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+
+/* =========================================================
+   CRITEO HERO VALIDATION OVERLAY v1
+   Covers legacy Hillstrom artwork inside master scene.
+   ========================================================= */
+
+.hero-criteo-card{
+  position:absolute;
+  z-index:9;
+
+  left:1.55%;
+  top:63.0%;
+  width:30.1%;
+  height:17.6%;
+
+  padding:1.05% 1.15% .75%;
+  display:flex;
+  flex-direction:column;
+
+  text-decoration:none;
+  color:#eaffff;
+
+  background:
+    linear-gradient(145deg,
+      rgba(1,20,34,.985),
+      rgba(0,8,17,.99));
+
+  border:1px solid rgba(0,234,255,.48);
+  border-left:2px solid rgba(0,234,255,.72);
+
+  box-shadow:
+    0 0 18px rgba(0,234,255,.12),
+    inset 0 0 20px rgba(0,234,255,.045);
+
+  backdrop-filter:blur(4px);
+  overflow:hidden;
+
+  transition:
+    transform .2s ease,
+    border-color .2s ease,
+    box-shadow .2s ease;
+}
+
+.hero-criteo-card:hover,
+.hero-criteo-card:focus-visible{
+  outline:none;
+  transform:translateY(-2px);
+  border-color:rgba(0,234,255,.82);
+  box-shadow:
+    0 0 25px rgba(0,234,255,.22),
+    inset 0 0 22px rgba(0,234,255,.06);
+}
+
+.hero-criteo-eyebrow{
+  display:block;
+  color:#00eaff;
+  font-size:clamp(7px,.72vw,12px);
+  font-weight:900;
+  letter-spacing:.13em;
+  line-height:1.1;
+}
+
+.hero-criteo-title{
+  display:block;
+  margin-top:.32em;
+  color:#eaffff;
+  font-size:clamp(8px,.86vw,14px);
+  font-weight:800;
+  letter-spacing:.045em;
+  line-height:1.1;
+}
+
+.hero-criteo-tagline{
+  display:block;
+  margin-top:.38em;
+  color:#00eaff;
+  font-size:clamp(6px,.55vw,9px);
+  font-weight:800;
+  letter-spacing:.09em;
+  line-height:1.1;
+}
+
+.hero-criteo-stats{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  margin-top:auto;
+  border-top:1px solid rgba(0,234,255,.20);
+  border-bottom:1px solid rgba(0,234,255,.16);
+}
+
+.hero-criteo-stats > span{
+  min-width:0;
+  padding:.55em .42em;
+  border-right:1px solid rgba(0,234,255,.16);
+}
+
+.hero-criteo-stats > span:last-child{
+  border-right:0;
+}
+
+.hero-criteo-stats strong{
+  display:block;
+  color:#f3ffff;
+  font-size:clamp(10px,1.05vw,17px);
+  line-height:1;
+  white-space:nowrap;
+  text-shadow:0 0 9px rgba(0,234,255,.25);
+}
+
+.hero-criteo-stats small{
+  display:block;
+  margin-top:.38em;
+  color:#8fbac5;
+  font-size:clamp(5px,.47vw,8px);
+  line-height:1.15;
+  letter-spacing:.08em;
+}
+
+.hero-criteo-footer{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:8px;
+  padding-top:.45em;
+}
+
+.hero-criteo-footer b{
+  color:#00ff66;
+  font-size:clamp(6px,.52vw,9px);
+  letter-spacing:.08em;
+}
+
+.hero-criteo-footer em{
+  color:#8ffaff;
+  font-size:clamp(5px,.46vw,8px);
+  font-style:normal;
+  letter-spacing:.07em;
+}
+
+@media(max-width:900px){
+  .hero-criteo-card{
+    padding:.8% .9% .6%;
+  }
+
+  .hero-criteo-tagline{
+    display:none;
+  }
+}
+
+@media(max-width:640px){
+  .hero-criteo-card{
+    display:none;
+  }
+}
+
+
+/* CRITEO HERO OVERLAY POSITION v2 */
+.hero-criteo-card{
+  top:70.8%;
+  left:1.55%;
+  width:30.1%;
+  height:19.0%;
+}
+
+
+/* CRITEO HERO OVERLAY POSITION v3 */
+.hero-criteo-card{
+  top:70.8%;
+  left:1.55%;
+  width:30.1%;
+  height:26.0%;
+}
+
+
+/* CRITEO HERO OVERLAY POSITION v4 */
+.hero-criteo-card{
+  top:70.8%;
+  left:1.55%;
+  width:30.1%;
+  height:28.2%;
+  padding:1.05% 1.15% .65%;
+}
+
+.hero-criteo-stats{
+  margin-top:1.15em;
+}
+
+.hero-criteo-footer{
+  margin-top:auto;
+}
+
+
+/* =========================================================
+   ADIE HERO DECISION INTELLIGENCE LOOP v1
+   Covers legacy KEY ADVANTAGES artwork.
+   ========================================================= */
+
+.hero-decision-loop{
+  position:absolute;
+  z-index:9;
+
+  left:32.2%;
+  top:70.8%;
+  width:33.5%;
+  height:28.2%;
+
+  padding:1.05% 1.25% .8%;
+  display:flex;
+  flex-direction:column;
+
+  text-decoration:none;
+  color:#eaffff;
+
+  background:
+    linear-gradient(145deg,
+      rgba(1,20,34,.985),
+      rgba(0,8,17,.99));
+
+  border:1px solid rgba(0,234,255,.48);
+
+  box-shadow:
+    0 0 18px rgba(0,234,255,.12),
+    inset 0 0 20px rgba(0,234,255,.045);
+
+  backdrop-filter:blur(4px);
+  overflow:hidden;
+
+  transition:
+    transform .2s ease,
+    border-color .2s ease,
+    box-shadow .2s ease;
+}
+
+.hero-decision-loop:hover,
+.hero-decision-loop:focus-visible{
+  outline:none;
+  transform:translateY(-2px);
+  border-color:rgba(0,234,255,.82);
+  box-shadow:
+    0 0 25px rgba(0,234,255,.22),
+    inset 0 0 22px rgba(0,234,255,.06);
+}
+
+.hero-loop-eyebrow{
+  display:block;
+  color:#00eaff;
+  font-size:clamp(8px,.78vw,13px);
+  font-weight:900;
+  letter-spacing:.13em;
+  line-height:1.1;
+}
+
+.hero-loop-flow{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-top:.7em;
+  padding:.55em .65em;
+
+  border-top:1px solid rgba(0,234,255,.20);
+  border-bottom:1px solid rgba(0,234,255,.20);
+
+  color:#eaffff;
+  font-size:clamp(6px,.58vw,10px);
+  letter-spacing:.08em;
+}
+
+.hero-loop-flow b{
+  font-weight:900;
+}
+
+.hero-loop-flow i{
+  color:#00eaff;
+  font-style:normal;
+  text-shadow:0 0 8px rgba(0,234,255,.65);
+}
+
+.hero-loop-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:0;
+  margin-top:.55em;
+  flex:1;
+}
+
+.hero-loop-grid > span{
+  padding:.55em .65em;
+  border-bottom:1px solid rgba(0,234,255,.13);
+}
+
+.hero-loop-grid > span:nth-child(odd){
+  border-right:1px solid rgba(0,234,255,.13);
+}
+
+.hero-loop-grid strong{
+  display:block;
+  color:#dffcff;
+  font-size:clamp(6px,.58vw,10px);
+  line-height:1.15;
+  letter-spacing:.045em;
+}
+
+.hero-loop-grid small{
+  display:block;
+  margin-top:.32em;
+  color:#789da8;
+  font-size:clamp(5px,.45vw,8px);
+  line-height:1.18;
+}
+
+@media(max-width:900px){
+  .hero-decision-loop{
+    padding:.8% .9%;
+  }
+
+  .hero-loop-grid small{
+    display:none;
+  }
+}
+
+@media(max-width:640px){
+  .hero-decision-loop{
+    display:none;
+  }
+}
+
+
+/* =========================================================
+   ADIE HERO CYBERSECURITY CARD v4
+   Third aligned hero evidence card.
+   ========================================================= */
+
+.hero-cyber-card{
+  position:absolute;
+  z-index:9;
+
+  top:70.8%;
+  right:1.55%;
+  width:32.0%;
+  height:28.2%;
+
+  padding:1.05% 1.15% .65%;
+
+  display:flex;
+  flex-direction:column;
+
+  text-decoration:none;
+  color:#eaffff;
+
+  background:
+    linear-gradient(145deg,
+      rgba(1,20,34,.985),
+      rgba(0,8,17,.99));
+
+  border:1px solid rgba(0,234,255,.48);
+  border-left:2px solid rgba(0,255,102,.62);
+
+  box-shadow:
+    0 0 18px rgba(0,234,255,.12),
+    inset 0 0 20px rgba(0,234,255,.045);
+
+  backdrop-filter:blur(4px);
+  overflow:hidden;
+
+  transition:
+    transform .2s ease,
+    border-color .2s ease,
+    box-shadow .2s ease;
+}
+
+.hero-cyber-card:hover,
+.hero-cyber-card:focus-visible{
+  outline:none;
+  transform:translateY(-2px);
+  border-color:rgba(0,234,255,.82);
+
+  box-shadow:
+    0 0 25px rgba(0,234,255,.22),
+    inset 0 0 22px rgba(0,234,255,.06);
+}
+
+.hero-cyber-eyebrow{
+  display:block;
+  color:#00eaff;
+  font-size:clamp(8px,.78vw,13px);
+  font-weight:900;
+  letter-spacing:.13em;
+  line-height:1.1;
+}
+
+.hero-cyber-title{
+  display:block;
+  margin-top:.32em;
+  color:#eaffff;
+  font-size:clamp(8px,.86vw,14px);
+  font-weight:800;
+  letter-spacing:.045em;
+  line-height:1.1;
+}
+
+.hero-cyber-tagline{
+  display:block;
+  margin-top:.38em;
+  color:#00eaff;
+  font-size:clamp(6px,.55vw,9px);
+  font-weight:800;
+  letter-spacing:.09em;
+  line-height:1.1;
+}
+
+.hero-cyber-stats{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+
+  margin-top:1.15em;
+
+  border-top:1px solid rgba(0,234,255,.20);
+  border-bottom:1px solid rgba(0,234,255,.16);
+}
+
+.hero-cyber-stats > span{
+  min-width:0;
+  padding:.55em .42em;
+  border-right:1px solid rgba(0,234,255,.16);
+}
+
+.hero-cyber-stats > span:last-child{
+  border-right:0;
+}
+
+.hero-cyber-stats strong{
+  display:block;
+  color:#f3ffff;
+  font-size:clamp(9px,1vw,16px);
+  line-height:1;
+  white-space:nowrap;
+  text-shadow:0 0 9px rgba(0,234,255,.25);
+}
+
+.hero-cyber-stats small{
+  display:block;
+  margin-top:.38em;
+
+  color:#8fbac5;
+  font-size:clamp(5px,.47vw,8px);
+  line-height:1.15;
+  letter-spacing:.08em;
+}
+
+.hero-cyber-stats b{
+  display:block;
+  margin-top:.35em;
+
+  color:#00ff66;
+  font-size:clamp(5px,.46vw,8px);
+  letter-spacing:.08em;
+}
+
+.hero-cyber-footer{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:8px;
+
+  margin-top:auto;
+  padding-top:.45em;
+}
+
+.hero-cyber-footer > b{
+  color:#00ff66;
+  font-size:clamp(6px,.52vw,9px);
+  letter-spacing:.08em;
+}
+
+.hero-cyber-footer > em{
+  color:#8ffaff;
+  font-size:clamp(5px,.46vw,8px);
+  font-style:normal;
+  letter-spacing:.07em;
+}
+
+@media(max-width:900px){
+  .hero-cyber-card{
+    top:70.8%;
+    right:1.55%;
+    width:32%;
+    height:28.2%;
+    padding:.8% .9% .6%;
+  }
+
+  .hero-cyber-tagline{
+    display:none;
+  }
+}
+
+@media(max-width:640px){
+  .hero-cyber-card{
+    display:none;
+  }
+}
+
+
+/* HERO THREE-CARD ALIGNMENT v2 */
+
+/* Criteo — slightly lower */
+.hero-criteo-card{
+  top:72.0%;
+}
+
+/* Decision Loop — a touch lower */
+.hero-decision-loop{
+  top:72.4%;
+}
+
+/* Cybersecurity — a touch lower */
+.hero-cyber-card{
+  top:72.4%;
+}
+
+
+/* HERO THREE-CARD HEIGHT REFINEMENT v3 */
+
+.hero-criteo-card{
+  height:26.5%;
+}
+
+.hero-decision-loop{
+  height:26.1%;
+}
+
+.hero-cyber-card{
+  height:26.1%;
+}
+
+
+/* TEMP TEST — hide legacy proof strip */
+.adie-proof-strip{
+  display:none;
+}
+
+
+/* HERO THREE-CARD BOTTOM COVER v4
+   Keep top alignment, extend downward over legacy artwork.
+*/
+
+.hero-criteo-card{
+  height:29.0%;
+}
+
+.hero-decision-loop{
+  height:28.6%;
+}
+
+.hero-cyber-card{
+  height:28.6%;
+}
+
+
+/* HERO THREE-CARD BOTTOM COVER v5 — fine adjustment */
+
+.hero-criteo-card{
+  height:28.4%;
+}
+
+.hero-decision-loop{
+  height:28.0%;
+}
+
+.hero-cyber-card{
+  height:28.0%;
+}
+
+
+/* EXECUTIVE BRIDGE TOP SPACING v2 */
+.adie-purpose{
+  padding-top:72px;
+}
+
+
+/* EARTH MOTION TUNING v1
+   More visible planetary-motion illusion without distracting from ADIE.
+*/
+
+.earth-atmosphere{
+  animation-duration:22s;
+}
+
+.earth-longitudes{
+  animation:earthGridDriftV2 24s linear infinite;
+}
+
+.earth-light-sweep{
+  animation-duration:20s;
+}
+
+@keyframes earthGridDriftV2{
+  from{
+    transform:translateX(-8%) skewX(-8deg);
+  }
+  to{
+    transform:translateX(10%) skewX(-8deg);
+  }
+}
+
+
+/* EARTH GRID EXTREME MOTION TEST v3
+   Deliberately strong test to expose the maximum visible rotation illusion.
+*/
+
+.earth-longitudes{
+  animation:earthGridExtremeV3 18s linear infinite !important;
+  opacity:1;
+}
+
+@keyframes earthGridExtremeV3{
+  from{
+    transform:translateX(-28%) skewX(-8deg);
+  }
+  to{
+    transform:translateX(29%) skewX(-8deg);
+  }
+}
+
+.earth-motion{
+  opacity:.92;
+}
+
+
+/* EARTH GRID MAXIMUM VISIBILITY TEST v4 */
+
+.earth-longitudes{
+  animation:earthGridExtremeV4 10s linear infinite !important;
+  opacity:1 !important;
+}
+
+@keyframes earthGridExtremeV4{
+  from{
+    transform:translateX(-128%) skewX(-8deg);
+  }
+  to{
+    transform:translateX(129%) skewX(-8deg);
+  }
+}
+
+.earth-motion{
+  opacity:1 !important;
+}
+
+
+/* EARTH GRID SPEED MAX TEST v5 */
+
+.earth-longitudes{
+  animation-duration:1s !important;
+}
+
+
+/* HERO POD SECURITY GREEN TEST v1 */
+
+.visual-stage>.hero-real-controls>.zone-data,
+.visual-stage>.hero-real-controls>.zone-causal,
+.visual-stage>.hero-real-controls>.zone-decision,
+.visual-stage>.hero-real-controls>.zone-safety,
+.visual-stage>.hero-real-controls>.zone-action,
+.visual-stage>.hero-real-controls>.zone-learn{
+  --module-rgb:0,255,102 !important;
+  --module-color:#00ff66 !important;
+}
+
+
+/* HERO POD SECURITY GREEN BALANCE v2
+   Controlled green at rest, stronger on interaction.
+*/
+
+.visual-stage>.hero-real-controls>.zone-data,
+.visual-stage>.hero-real-controls>.zone-causal,
+.visual-stage>.hero-real-controls>.zone-decision,
+.visual-stage>.hero-real-controls>.zone-safety,
+.visual-stage>.hero-real-controls>.zone-action,
+.visual-stage>.hero-real-controls>.zone-learn{
+  --module-rgb:0,255,102 !important;
+  --module-color:#00ff66 !important;
+
+  border-color:rgba(0,255,102,.46) !important;
+
+  background:
+    radial-gradient(
+      circle at 50% 38%,
+      rgba(0,255,102,.16) 0 23%,
+      rgba(0,255,102,.085) 38%,
+      rgba(0,255,102,.038) 57%,
+      rgba(0,255,102,.014) 72%,
+      transparent 82%
+    ) !important;
+
+  box-shadow:
+    0 0 13px rgba(0,255,102,.27),
+    0 0 27px rgba(0,255,102,.09),
+    inset 0 0 17px rgba(0,255,102,.09) !important;
+}
+
+.visual-stage>.hero-real-controls>.zone-data::before,
+.visual-stage>.hero-real-controls>.zone-causal::before,
+.visual-stage>.hero-real-controls>.zone-decision::before,
+.visual-stage>.hero-real-controls>.zone-safety::before,
+.visual-stage>.hero-real-controls>.zone-action::before,
+.visual-stage>.hero-real-controls>.zone-learn::before{
+  border-color:rgba(0,255,102,.58) !important;
+  box-shadow:
+    0 0 10px rgba(0,255,102,.32),
+    inset 0 0 12px rgba(0,255,102,.09) !important;
+}
+
+/* Hover = stronger security-green state */
+.visual-stage>.hero-real-controls>.zone-data:hover,
+.visual-stage>.hero-real-controls>.zone-data:focus-visible,
+.visual-stage>.hero-real-controls>.zone-causal:hover,
+.visual-stage>.hero-real-controls>.zone-causal:focus-visible,
+.visual-stage>.hero-real-controls>.zone-decision:hover,
+.visual-stage>.hero-real-controls>.zone-decision:focus-visible,
+.visual-stage>.hero-real-controls>.zone-safety:hover,
+.visual-stage>.hero-real-controls>.zone-safety:focus-visible,
+.visual-stage>.hero-real-controls>.zone-action:hover,
+.visual-stage>.hero-real-controls>.zone-action:focus-visible,
+.visual-stage>.hero-real-controls>.zone-learn:hover,
+.visual-stage>.hero-real-controls>.zone-learn:focus-visible{
+  border-color:rgba(0,255,102,.95) !important;
+  background:
+    radial-gradient(
+      circle at 50% 38%,
+      rgba(0,255,102,.34) 0 25%,
+      rgba(0,255,102,.18) 42%,
+      rgba(0,255,102,.07) 64%,
+      transparent 82%
+    ) !important;
+  box-shadow:
+    0 0 28px rgba(0,255,102,.68),
+    0 0 58px rgba(0,255,102,.24),
+    inset 0 0 24px rgba(0,255,102,.20) !important;
+}
+
