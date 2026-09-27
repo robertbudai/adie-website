@@ -1,0 +1,6 @@
+ADIE ASVS FINAL EVIDENCE SNAPSHOT — SHA-256
+
+Snapshot:
+f4da56b067f4a74cda7da83670701849fd7b54a188985271d83c4d340ba62ad1
+
+The hash identifies the final evidence snapshot sealed on 2026-09-27.
